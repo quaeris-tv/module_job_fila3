@@ -5,8 +5,7 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration
-{
+return new class() extends XotBaseMigration {
     /**
      * Run the migrations.
      */
@@ -25,7 +24,6 @@ return new class extends XotBaseMigration
                 $table->integer('attempt')->default(0);
                 $table->integer('progress')->nullable();
                 $table->text('exception_message')->nullable();
-                $table->timestamps();
             }
         );
         // -- UPDATE --

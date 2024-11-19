@@ -5,8 +5,7 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration
-{
+return new class() extends XotBaseMigration {
     /**
      * Run the migrations.
      */
@@ -37,18 +36,11 @@ return new class extends XotBaseMigration
                 $table->index('auto_cleanup_num', 'tasks_auto_cleanup_num_idx');
                 $table->index('auto_cleanup_type', 'tasks_auto_cleanup_type_idx');
                 $table->boolean('run_in_background')->default(false);
-                $table->string('created_by')->nullable();
-                $table->string('updated_by')->nullable();
-                $table->timestamps();
             }
         );
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table): void {
-                // if (! $this->hasColumn('created_by')) {
-                //     $table->string('created_by')->nullable();
-                //     $table->string('updated_by')->nullable();
-                // }
                 $this->updateTimestamps(table: $table, hasSoftDeletes: true);
             }
         );
