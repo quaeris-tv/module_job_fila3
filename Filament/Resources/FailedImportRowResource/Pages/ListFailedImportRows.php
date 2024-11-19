@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\FailedImportRowResource\Pages;
 
-use Filament\Tables;
 use Filament\Actions;
-use Filament\Tables\Table;
+use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Resources\Pages\ListRecords;
-use Modules\Xot\Filament\Pages\XotBaseListRecords;
+use Filament\Tables\Table;
 use Modules\Job\Filament\Resources\FailedImportRowResource;
+use Modules\Xot\Filament\Pages\XotBaseListRecords;
 
 class ListFailedImportRows extends XotBaseListRecords
 {
@@ -23,7 +22,6 @@ class ListFailedImportRows extends XotBaseListRecords
             TextColumn::make('data'),
             TextColumn::make('import_id'),
             TextColumn::make('validation_error'),
-            // $table->timestamps();
         ];
     }
 
