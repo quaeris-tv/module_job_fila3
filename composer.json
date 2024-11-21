@@ -22,10 +22,7 @@
         "role": "Developer"
     }],
     "require": {
-        "php": "^8.2",
-        "filament/filament": "^3.2",
-        "invaders-xx/filament-jsoneditor": "*",
-        "mhmiton/laravel-modules-livewire": "*"
+
     },
     "repositories": [
         {
