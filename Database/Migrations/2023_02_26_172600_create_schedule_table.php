@@ -5,8 +5,7 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration
-{
+return new class() extends XotBaseMigration {
     /**
      * Run the migrations.
      */
@@ -36,17 +35,13 @@ return new class extends XotBaseMigration
                 $table->boolean('status')->default(true);
                 $table->boolean('run_in_background')->default(false);
                 $table->boolean('sendmail_success')->default(false);
-                $table->timestamps();
+
                 $table->softDeletes();
             }
         );
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table): void {
-                // if (! $this->hasColumn('created_by')) {
-                //     $table->string('created_by')->nullable();
-                //     $table->string('updated_by')->nullable();
-                // }
                 $this->updateTimestamps(table: $table, hasSoftDeletes: true);
             }
         );
