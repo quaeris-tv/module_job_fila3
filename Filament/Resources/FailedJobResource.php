@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://gitlab.com/amvisor/filament-failed-jobs/-/blob/master/src/Resources/FailedJobsResource.php
  */
@@ -78,7 +79,7 @@ class FailedJobResource extends XotBaseResource
                 [
                     DeleteBulkAction::make(),
                     BulkAction::make('retry')
-                        ->label('Retry')
+
                         ->requiresConfirmation()
                         ->action(
                             static function (Collection $collection): void {
@@ -100,7 +101,7 @@ class FailedJobResource extends XotBaseResource
                     DeleteAction::make('Delete'),
                     ViewAction::make('View'),
                     Action::make('retry')
-                        ->label('Retry')
+
                         ->requiresConfirmation()
                         ->action(
                             static function (FailedJob $failedJob): void {
