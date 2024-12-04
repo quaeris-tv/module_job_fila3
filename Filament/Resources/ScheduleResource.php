@@ -78,7 +78,7 @@ class ScheduleResource extends XotBaseResource
         return [
             Section::make([
                 Select::make('command')
-                    ->label(static::trans('fields.command'))
+                    
 
                     // ->options(
                     //     fn () => config('filament-database-schedule.commands.enable_custom') ?
@@ -102,7 +102,7 @@ class ScheduleResource extends XotBaseResource
                     }),
                 TextInput::make('command_custom')
                     ->placeholder(static::trans('messages.custom-command-here'))
-                    ->label(static::trans('messages.custom'))
+                    
                     ->required()
                     ->visible(fn (Get $get): bool => 'custom' === $get('command') && config('filament-database-schedule.commands.enable_custom')),
                 Repeater::make('params')
@@ -130,7 +130,7 @@ class ScheduleResource extends XotBaseResource
                     ->reorderable(false),
 
                 // CheckboxList::make('options')
-                //  ->label(static::trans('fields.options'))
+                //  
                 //     ->options(
                 //         fn (Get $get) => collect(static::$commands->firstWhere('name', $get('command'))['options']['withoutValue'] ?? [])
                 //             ->mapWithKeys(function ($value) {
@@ -144,39 +144,39 @@ class ScheduleResource extends XotBaseResource
                 TextInput::make('expression')
                     ->placeholder('* * * * *')
                     ->rules([new Corn()])
-                    ->label(static::trans('fields.expression'))
+                    
                     // ->helperText(fn (): ?\Illuminate\Support\HtmlString => config('filament-database-schedule.tool-help-cron-expression.enable') ? new HtmlString(" <a href='".config('filament-database-schedule.tool-help-cron-expression.url')."' target='_blank'>".static::trans('messages.help-cron-expression').' </a>') : null)
                     ->required(),
                 TagsInput::make('environments')
                     ->placeholder(null)
-                    ->label(static::trans('fields.environments')),
+                    ,
                 TextInput::make('log_filename')
-                    ->label(static::trans('fields.log_filename'))
+                    
                     ->helperText(static::trans('messages.help-log-filename')),
                 TextInput::make('webhook_before')
-                    ->label(static::trans('fields.webhook_before')),
+                    ,
                 TextInput::make('webhook_after')
-                    ->label(static::trans('fields.webhook_after')),
+                    ,
                 TextInput::make('email_output')
-                    ->label(static::trans('fields.email_output')),
+                    ,
                 Toggle::make('sendmail_success')
-                    ->label(static::trans('fields.sendmail_success')),
+                    ,
                 Toggle::make('sendmail_error')
-                    ->label(static::trans('fields.sendmail_error')),
+                    ,
                 Toggle::make('log_success')
-                    ->label(static::trans('fields.log_success'))
+                    
                     ->default(true),
                 Toggle::make('log_error')
-                    ->label(static::trans('fields.log_error'))
+                    
                     ->default(true),
                 Toggle::make('even_in_maintenance_mode')
-                    ->label(static::trans('fields.even_in_maintenance_mode')),
+                    ,
                 Toggle::make('without_overlapping')
-                    ->label(static::trans('fields.without_overlapping')),
+                    ,
                 Toggle::make('on_one_server')
-                    ->label(static::trans('fields.on_one_server')),
+                    ,
                 Toggle::make('run_in_background')
-                    ->label(static::trans('fields.run_in_background')),
+                    ,
             ])
                 ->inlineLabel(false),
         ];

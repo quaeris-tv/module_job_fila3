@@ -23,7 +23,7 @@ class ListFailedJobs extends XotBaseListRecords
     {
         return [
             Action::make('retry_all')
-                ->label('Retry all failed Jobs')
+                
                 ->requiresConfirmation()
                 ->action(
                     static function (): void {
@@ -36,7 +36,7 @@ class ListFailedJobs extends XotBaseListRecords
                 ),
 
             Action::make('delete_all')
-                ->label('Delete all failed Jobs')
+                
                 ->requiresConfirmation()
                 ->color('danger')
                 ->action(
