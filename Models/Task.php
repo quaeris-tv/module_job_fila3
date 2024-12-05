@@ -140,7 +140,7 @@ class Task extends BaseModel
     /**
      * Upcoming Accessor.
      *
-     * @throws \Exception
+     * throws \Exception
      */
     public function getUpcomingAttribute(): string
     {
