@@ -11,6 +11,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Validation\ValidationException;
 use Modules\Job\Filament\Resources\ScheduleResource;
 use Modules\Xot\Filament\Traits\NavigationPageLabelTrait;
+use Webmozart\Assert\Assert;
 
 class CreateSchedule extends CreateRecord
 {
@@ -22,7 +23,9 @@ class CreateSchedule extends CreateRecord
 
     public function getformSchema(): array
     {
-        return $this->getResource()::getFormSchema();
+        Assert::isArray($res = $this->getResource()::getFormSchema());
+
+        return $res;
     }
 
     public function form(Form $form): Form
