@@ -45,15 +45,21 @@ use Webmozart\Assert\Assert;
  * @property string                                                    $upcoming
  * @property DatabaseNotificationCollection<int, DatabaseNotification> $notifications
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/v0.2.10
  * @property int|null                                                  $notifications_count
  * @property Collection<int, \Modules\Job\Models\Result>               $results
  * @property int|null                                                  $results_count
  *
+<<<<<<< HEAD
 =======
  * @property int|null $notifications_count
  * @property Collection<int, \Modules\Job\Models\Result> $results
  * @property int|null $results_count
 >>>>>>> origin/dev
+=======
+>>>>>>> origin/v0.2.10
  * @method static \Illuminate\Database\Eloquent\Builder|Task newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Task newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Task query()
@@ -78,12 +84,16 @@ use Webmozart\Assert\Assert;
  * @method static \Illuminate\Database\Eloquent\Builder|Task whereTimezone($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Task whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Task whereUpdatedBy($value)
+ *
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Task whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Task whereDeletedBy($value)
+ *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+<<<<<<< HEAD
 <<<<<<< HEAD
  * @property int                                         $order_column
  * @property string                                      $status
@@ -92,8 +102,14 @@ use Webmozart\Assert\Assert;
  * @property int $order_column
  * @property string $status
 >>>>>>> origin/dev
+=======
+ * @property int                                         $order_column
+ * @property string                                      $status
+ *
+>>>>>>> origin/v0.2.10
  * @method static \Illuminate\Database\Eloquent\Builder|Task whereOrderColumn($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Task whereStatus($value)
+ *
  * @mixin \Eloquent
  */
 class Task extends BaseModel
