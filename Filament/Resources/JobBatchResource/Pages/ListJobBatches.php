@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://gitlab.com/amvisor/filament-failed-jobs/-/blob/master/src/Resources/JobBatchesResource/Pages/ListJobBatches.php?ref_type=heads
  */
@@ -7,24 +8,20 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\JobBatchResource\Pages;
 
-use Filament\Tables\Table;
 use Filament\Actions\Action;
-use Webmozart\Assert\Assert;
-use Modules\UI\Enums\TableLayoutEnum;
-use Filament\Tables\Columns\TextColumn;
-use Illuminate\Support\Facades\Artisan;
 use Filament\Notifications\Notification;
-use Filament\Tables\Enums\FiltersLayout;
-use Filament\Resources\Pages\ListRecords;
-use Filament\Tables\Enums\ActionsPosition;
-use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Tables\Actions\DeleteBulkAction;
-use Modules\Xot\Filament\Pages\XotBaseListRecords;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Enums\ActionsPosition;
+use Filament\Tables\Enums\FiltersLayout;
+use Filament\Tables\Table;
+use Illuminate\Support\Facades\Artisan;
 use Modules\Job\Filament\Resources\JobBatchResource;
+use Modules\Xot\Filament\Pages\XotBaseListRecords;
+use Webmozart\Assert\Assert;
 
 class ListJobBatches extends XotBaseListRecords
 {
-    
     protected static string $resource = JobBatchResource::class;
 
     public function table(Table $table): Table
@@ -122,7 +119,11 @@ class ListJobBatches extends XotBaseListRecords
     {
         return [
             Action::make('prune_batches')
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> origin/v0.2.10
                 ->requiresConfirmation()
                 ->color('danger')
                 ->action(

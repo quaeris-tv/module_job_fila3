@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://github.com/mooxphp/jobs/blob/main/src/Resources/JobsWaitingResource.php
  */
@@ -60,7 +61,11 @@ class JobsWaitingResource extends XotBaseResource
     //             [
     //                 TextColumn::make('status')
     //                     ->badge()
+<<<<<<< HEAD
     //                     
+=======
+    //                     )
+>>>>>>> origin/v0.2.10
     //                     ->sortable()
     //                     // ->formatStateUsing(static fn (string $state): string => __("jobs::translations.{$state}"))
     //                     ->color(
@@ -72,6 +77,7 @@ class JobsWaitingResource extends XotBaseResource
     //                         }
     //                     ),
     //                 TextColumn::make('display_name')
+<<<<<<< HEAD
     //                     
     //                     ->sortable(),
     //                 TextColumn::make('queue')
@@ -86,6 +92,22 @@ class JobsWaitingResource extends XotBaseResource
     //                     ->sortable(),
     //                 TextColumn::make('created_at')
     //                     
+=======
+    //                     )
+    //                     ->sortable(),
+    //                 TextColumn::make('queue')
+    //                     )
+    //                     ->sortable(),
+    //                 TextColumn::make('attempts')
+    //                     )
+    //                     ->sortable(),
+    //                 TextColumn::make('reserved_at')
+    //                     )
+    //                     ->since()
+    //                     ->sortable(),
+    //                 TextColumn::make('created_at')
+    //                     )
+>>>>>>> origin/v0.2.10
     //                     ->since()
     //                     ->sortable(),
     //             ]
