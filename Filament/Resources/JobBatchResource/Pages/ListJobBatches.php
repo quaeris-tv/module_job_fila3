@@ -119,11 +119,7 @@ class ListJobBatches extends XotBaseListRecords
     {
         return [
             Action::make('prune_batches')
-<<<<<<< HEAD
-                
-=======
 
->>>>>>> origin/v0.2.10
                 ->requiresConfirmation()
                 ->color('danger')
                 ->action(

@@ -31,25 +31,6 @@ class ListSchedules extends XotBaseListRecords
 
                     return $record->command;
                 })
-<<<<<<< HEAD
-                
-                ->searchable()
-                ->sortable(),
-            ScheduleArguments::make('params')
-                
-                ->searchable()
-                ->sortable(),
-            ScheduleOptions::make('options')
-                
-                ->searchable()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('expression')
-                
-                ->searchable()
-                ->sortable(),
-            Tables\Columns\TagsColumn::make('environments')
-                
-=======
                 ->searchable()
                 ->sortable(),
             ScheduleArguments::make('params')
@@ -62,15 +43,10 @@ class ListSchedules extends XotBaseListRecords
                 ->searchable()
                 ->sortable(),
             Tables\Columns\TagsColumn::make('environments')
->>>>>>> origin/v0.2.10
                 ->separator(',')
                 ->searchable()
                 ->sortable(),
             Tables\Columns\TextColumn::make('created_at')
-<<<<<<< HEAD
-                
-=======
->>>>>>> origin/v0.2.10
                 ->searchable()
                 ->sortable()
                 ->dateTime()
@@ -89,11 +65,7 @@ class ListSchedules extends XotBaseListRecords
                         ->setTimezone($timezone ?? $column->getTimezone())
                         ->translatedFormat($format);
                 })
-<<<<<<< HEAD
-                
-=======
                 )
->>>>>>> origin/v0.2.10
                 ->searchable()
                 ->sortable(),
             */
@@ -115,11 +87,7 @@ class ListSchedules extends XotBaseListRecords
                     'success' => Schedule::STATUS_ACTIVE,
                     'danger' => Schedule::STATUS_TRASHED,
                 ])
-<<<<<<< HEAD
-                              
-=======
                               )
->>>>>>> origin/v0.2.10
                               ->searchable()
                               ->sortable(),
             */
