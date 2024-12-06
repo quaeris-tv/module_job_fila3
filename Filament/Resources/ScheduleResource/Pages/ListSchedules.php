@@ -4,24 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\ScheduleResource\Pages;
 
-use Closure;
-use Filament\Tables;
 use Filament\Actions;
+use Filament\Tables;
+use Filament\Tables\Columns\Column;
 use Filament\Tables\Table;
 use Illuminate\Support\Carbon;
-use Modules\Job\Models\Schedule;
-use Filament\Tables\Columns\Column;
-use Filament\Resources\Pages\ListRecords;
 use Modules\Job\Filament\Columns\ActionGroup;
-use Modules\Job\Filament\Columns\ScheduleOptions;
-use Modules\Xot\Filament\Pages\XotBaseListRecords;
 use Modules\Job\Filament\Columns\ScheduleArguments;
+use Modules\Job\Filament\Columns\ScheduleOptions;
 use Modules\Job\Filament\Resources\ScheduleResource;
-use Modules\Xot\Filament\Traits\NavigationPageLabelTrait;
+use Modules\Job\Models\Schedule;
+use Modules\Xot\Filament\Pages\XotBaseListRecords;
 
 class ListSchedules extends XotBaseListRecords
 {
-    
     protected static string $resource = ScheduleResource::class;
 
     public function getTableColumns(): array
@@ -29,34 +25,28 @@ class ListSchedules extends XotBaseListRecords
         return [
             Tables\Columns\TextColumn::make('command')
                 ->getStateUsing(function ($record) {
-                    if ($record->command === 'custom') {
+                    if ('custom' === $record->command) {
                         return $record->command_custom;
                     }
 
                     return $record->command;
                 })
-                
                 ->searchable()
                 ->sortable(),
             ScheduleArguments::make('params')
-                
                 ->searchable()
                 ->sortable(),
             ScheduleOptions::make('options')
-                
                 ->searchable()
                 ->sortable(),
             Tables\Columns\TextColumn::make('expression')
-                
                 ->searchable()
                 ->sortable(),
             Tables\Columns\TagsColumn::make('environments')
-                
                 ->separator(',')
                 ->searchable()
                 ->sortable(),
             Tables\Columns\TextColumn::make('created_at')
-                
                 ->searchable()
                 ->sortable()
                 ->dateTime()
@@ -75,7 +65,7 @@ class ListSchedules extends XotBaseListRecords
                         ->setTimezone($timezone ?? $column->getTimezone())
                         ->translatedFormat($format);
                 })
-                
+                )
                 ->searchable()
                 ->sortable(),
             */
@@ -97,7 +87,7 @@ class ListSchedules extends XotBaseListRecords
                     'success' => Schedule::STATUS_ACTIVE,
                     'danger' => Schedule::STATUS_TRASHED,
                 ])
-                              
+                              )
                               ->searchable()
                               ->sortable(),
             */
@@ -176,7 +166,7 @@ class ListSchedules extends XotBaseListRecords
         ];
     }
 
-    protected function getTableRecordUrlUsing(): ?Closure
+    protected function getTableRecordUrlUsing(): ?\Closure
     {
         return static fn (): ?string => null;
     }

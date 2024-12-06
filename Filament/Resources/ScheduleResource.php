@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://github.com/husam-tariq/filament-database-schedule/blob/main/src/Filament/Resources/ScheduleResource.php
  */
@@ -78,7 +79,7 @@ class ScheduleResource extends XotBaseResource
         return [
             Section::make([
                 Select::make('command')
-                    
+
 
                     // ->options(
                     //     fn () => config('filament-database-schedule.commands.enable_custom') ?
@@ -102,7 +103,7 @@ class ScheduleResource extends XotBaseResource
                     }),
                 TextInput::make('command_custom')
                     ->placeholder(static::trans('messages.custom-command-here'))
-                    
+
                     ->required()
                     ->visible(fn (Get $get): bool => 'custom' === $get('command') && config('filament-database-schedule.commands.enable_custom')),
                 Repeater::make('params')
@@ -130,7 +131,7 @@ class ScheduleResource extends XotBaseResource
                     ->reorderable(false),
 
                 // CheckboxList::make('options')
-                //  
+                //
                 //     ->options(
                 //         fn (Get $get) => collect(static::$commands->firstWhere('name', $get('command'))['options']['withoutValue'] ?? [])
                 //             ->mapWithKeys(function ($value) {
@@ -144,14 +145,14 @@ class ScheduleResource extends XotBaseResource
                 TextInput::make('expression')
                     ->placeholder('* * * * *')
                     ->rules([new Corn()])
-                    
+
                     // ->helperText(fn (): ?\Illuminate\Support\HtmlString => config('filament-database-schedule.tool-help-cron-expression.enable') ? new HtmlString(" <a href='".config('filament-database-schedule.tool-help-cron-expression.url')."' target='_blank'>".static::trans('messages.help-cron-expression').' </a>') : null)
                     ->required(),
                 TagsInput::make('environments')
                     ->placeholder(null)
                     ,
                 TextInput::make('log_filename')
-                    
+
                     ->helperText(static::trans('messages.help-log-filename')),
                 TextInput::make('webhook_before')
                     ,
@@ -164,10 +165,10 @@ class ScheduleResource extends XotBaseResource
                 Toggle::make('sendmail_error')
                     ,
                 Toggle::make('log_success')
-                    
+
                     ->default(true),
                 Toggle::make('log_error')
-                    
+
                     ->default(true),
                 Toggle::make('even_in_maintenance_mode')
                     ,
