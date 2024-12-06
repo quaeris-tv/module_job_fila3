@@ -8,21 +8,17 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\JobsWaitingResource\Pages;
 
-use Filament\Tables\Table;
-use Modules\UI\Enums\TableLayoutEnum;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Enums\FiltersLayout;
-use Filament\Resources\Pages\ListRecords;
-use Filament\Tables\Enums\ActionsPosition;
-use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Tables\Actions\DeleteBulkAction;
-use Modules\Xot\Filament\Pages\XotBaseListRecords;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Enums\ActionsPosition;
+use Filament\Tables\Enums\FiltersLayout;
+use Filament\Tables\Table;
 use Modules\Job\Filament\Resources\JobsWaitingResource;
 use Modules\Job\Filament\Resources\JobsWaitingResource\Widgets\JobsWaitingOverview;
+use Modules\Xot\Filament\Pages\XotBaseListRecords;
 
 class ListJobsWaiting extends XotBaseListRecords
 {
-    
     public static string $resource = JobsWaitingResource::class;
 
     public function getHeaderActions(): array
@@ -93,7 +89,6 @@ class ListJobsWaiting extends XotBaseListRecords
         return [
             TextColumn::make('status')
                 ->badge()
-                
                 ->sortable()
                 // ->formatStateUsing(static fn (string $state): string => __("jobs::translations.{$state}"))
                 ->color(
@@ -105,20 +100,15 @@ class ListJobsWaiting extends XotBaseListRecords
                     }
                 ),
             TextColumn::make('display_name')
-                
                 ->sortable(),
             TextColumn::make('queue')
-                
                 ->sortable(),
             TextColumn::make('attempts')
-                
                 ->sortable(),
             TextColumn::make('reserved_at')
-                
                 ->since()
                 ->sortable(),
             TextColumn::make('created_at')
-                
                 ->since()
                 ->sortable(),
         ];
