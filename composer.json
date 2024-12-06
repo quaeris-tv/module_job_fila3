@@ -22,14 +22,10 @@
         "role": "Developer"
     }],
     "require": {
-<<<<<<< HEAD
         
     },
     "require-dev": {
         
-=======
-
->>>>>>> origin/v0.2.10
     },
     "repositories": [
         {
