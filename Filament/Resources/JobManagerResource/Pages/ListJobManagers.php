@@ -22,7 +22,6 @@ use Modules\Job\Filament\Resources\JobManagerResource;
 
 class ListJobManagers extends XotBaseListRecords
 {
-    
     protected static string $resource = JobManagerResource::class;
 
     public function table(Table $table): Table
@@ -56,7 +55,7 @@ class ListJobManagers extends XotBaseListRecords
         return [
             TextColumn::make('status')
                 ->badge()
-                ->label(__('jobs::translations.status'))
+
                 ->sortable()
                 ->formatStateUsing(static fn (string $state): string => __("jobs::translations.{$state}"))
                 ->color(
@@ -68,18 +67,18 @@ class ListJobManagers extends XotBaseListRecords
                     }
                 ),
             TextColumn::make('name')
-                ->label(__('jobs::translations.name'))
+
                 ->sortable(),
             TextColumn::make('queue')
-                ->label(__('jobs::translations.queue'))
+
                 ->sortable(),
             TextColumn::make('progress')
-                ->label(__('jobs::translations.progress'))
+
                 ->formatStateUsing(static fn (string $state): string => "{$state}%")
                 ->sortable(),
-            // ProgressColumn::make('progress')->label(__('jobs::translations.progress'))->color('warning'),
+            // ProgressColumn::make('progress')->color('warning'),
             TextColumn::make('started_at')
-                ->label(__('jobs::translations.started_at'))
+
                 ->since()
                 ->sortable(),
         ];

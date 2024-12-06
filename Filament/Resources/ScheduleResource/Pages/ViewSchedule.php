@@ -79,12 +79,12 @@ class ViewSchedule extends Page implements HasTable
 
         return [
             Tables\Columns\Layout\Split::make([
-                Tables\Columns\TextColumn::make('command')->label(__('job::schedule.fields.command')),
+                Tables\Columns\TextColumn::make('command'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label(__('job::schedule.fields.expression'))
+
                     ->dateTime($date_format),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->label(__('job::schedule.fields.expression'))
+
                     ->formatStateUsing(static function ($state, $record): string {
                         if ($state === $record->created_at) {
                             return 'Processing...';
@@ -93,7 +93,7 @@ class ViewSchedule extends Page implements HasTable
                         return $state->diffInSeconds($record->created_at).' seconds';
                     }),
                 Tables\Columns\TextColumn::make('output')
-                    
+
                     ->formatStateUsing(static fn ($state): string => (count(explode('<br />', nl2br((string) $state))) - 1).' rows of output'),
             ]), Tables\Columns\Layout\Panel::make([
                 Tables\Columns\TextColumn::make('output')->extraAttributes(['class' => '!max-w-max'], true)
