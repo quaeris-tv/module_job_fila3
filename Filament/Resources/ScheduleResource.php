@@ -79,11 +79,7 @@ class ScheduleResource extends XotBaseResource
         return [
             Section::make([
                 Select::make('command')
-<<<<<<< HEAD
-                    
-=======
-                    )
->>>>>>> origin/v0.2.10
+
 
                     // ->options(
                     //     fn () => config('filament-database-schedule.commands.enable_custom') ?
@@ -107,11 +103,7 @@ class ScheduleResource extends XotBaseResource
                     }),
                 TextInput::make('command_custom')
                     ->placeholder(static::trans('messages.custom-command-here'))
-<<<<<<< HEAD
-                    
-=======
-                    )
->>>>>>> origin/v0.2.10
+
                     ->required()
                     ->visible(fn (Get $get): bool => 'custom' === $get('command') && config('filament-database-schedule.commands.enable_custom')),
                 Repeater::make('params')
@@ -139,11 +131,7 @@ class ScheduleResource extends XotBaseResource
                     ->reorderable(false),
 
                 // CheckboxList::make('options')
-<<<<<<< HEAD
-                //  
-=======
-                //  )
->>>>>>> origin/v0.2.10
+                //
                 //     ->options(
                 //         fn (Get $get) => collect(static::$commands->firstWhere('name', $get('command'))['options']['withoutValue'] ?? [])
                 //             ->mapWithKeys(function ($value) {
@@ -157,19 +145,14 @@ class ScheduleResource extends XotBaseResource
                 TextInput::make('expression')
                     ->placeholder('* * * * *')
                     ->rules([new Corn()])
-<<<<<<< HEAD
-                    
-=======
-                    )
->>>>>>> origin/v0.2.10
+
                     // ->helperText(fn (): ?\Illuminate\Support\HtmlString => config('filament-database-schedule.tool-help-cron-expression.enable') ? new HtmlString(" <a href='".config('filament-database-schedule.tool-help-cron-expression.url')."' target='_blank'>".static::trans('messages.help-cron-expression').' </a>') : null)
                     ->required(),
                 TagsInput::make('environments')
                     ->placeholder(null)
-<<<<<<< HEAD
                     ,
                 TextInput::make('log_filename')
-                    
+
                     ->helperText(static::trans('messages.help-log-filename')),
                 TextInput::make('webhook_before')
                     ,
@@ -182,10 +165,10 @@ class ScheduleResource extends XotBaseResource
                 Toggle::make('sendmail_error')
                     ,
                 Toggle::make('log_success')
-                    
+
                     ->default(true),
                 Toggle::make('log_error')
-                    
+
                     ->default(true),
                 Toggle::make('even_in_maintenance_mode')
                     ,
@@ -195,36 +178,6 @@ class ScheduleResource extends XotBaseResource
                     ,
                 Toggle::make('run_in_background')
                     ,
-=======
-                    ),
-                TextInput::make('log_filename')
-                    )
-                    ->helperText(static::trans('messages.help-log-filename')),
-                TextInput::make('webhook_before')
-                    ),
-                TextInput::make('webhook_after')
-                    ),
-                TextInput::make('email_output')
-                    ),
-                Toggle::make('sendmail_success')
-                    ),
-                Toggle::make('sendmail_error')
-                    ),
-                Toggle::make('log_success')
-                    )
-                    ->default(true),
-                Toggle::make('log_error')
-                    )
-                    ->default(true),
-                Toggle::make('even_in_maintenance_mode')
-                    ),
-                Toggle::make('without_overlapping')
-                    ),
-                Toggle::make('on_one_server')
-                    ),
-                Toggle::make('run_in_background')
-                    ),
->>>>>>> origin/v0.2.10
             ])
                 ->inlineLabel(false),
         ];
