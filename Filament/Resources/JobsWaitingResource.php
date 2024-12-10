@@ -119,10 +119,6 @@ class JobsWaitingResource extends XotBaseResource
         ];
     }
 
-    public static function getNavigationBadge(): ?string
-    {
-        return number_format(static::getModel()::count());
-    }
 
     /*
     public static function getNavigationBadge(): ?string {
