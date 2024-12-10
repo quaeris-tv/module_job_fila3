@@ -79,12 +79,12 @@ class ViewSchedule extends Page implements HasTable
 
         return [
             Tables\Columns\Layout\Split::make([
-                Tables\Columns\TextColumn::make('command')->label(__('job::schedule.fields.command')),
+                Tables\Columns\TextColumn::make('command'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label(__('job::schedule.fields.expression'))
+
                     ->dateTime($date_format),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->label(__('job::schedule.fields.expression'))
+
                     ->formatStateUsing(static function ($state, $record): string {
                         if ($state === $record->created_at) {
                             return 'Processing...';
