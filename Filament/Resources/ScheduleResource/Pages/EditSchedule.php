@@ -12,6 +12,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Validation\ValidationException;
 use Modules\Job\Filament\Resources\ScheduleResource;
 use Modules\Xot\Filament\Traits\NavigationPageLabelTrait;
+use Webmozart\Assert\Assert;
 
 class EditSchedule extends EditRecord
 {
@@ -23,7 +24,9 @@ class EditSchedule extends EditRecord
 
     public function getformSchema(): array
     {
-        return $this->getResource()::getFormSchema();
+        Assert::isArray($res = $this->getResource()::getFormSchema());
+
+        return $res;
     }
 
     public function form(Form $form): Form
@@ -47,8 +50,8 @@ class EditSchedule extends EditRecord
             ->send();
     }
 
-    protected function getRedirectUrl(): string
-    {
-        return $this->getResource()::getUrl('index');
-    }
+    // protected function getRedirectUrl(): string
+    // {
+    //    return $this->getResource()::getUrl('index');
+    // }
 }

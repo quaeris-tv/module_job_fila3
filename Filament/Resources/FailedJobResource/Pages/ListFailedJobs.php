@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://gitlab.com/amvisor/filament-failed-jobs/-/blob/master/src/Resources/FailedJobsResource/Pages/ListFailedJobs.php?ref_type=heads
  */
@@ -8,12 +9,11 @@ declare(strict_types=1);
 namespace Modules\Job\Filament\Resources\FailedJobResource\Pages;
 
 use Filament\Actions\Action;
-use Modules\Job\Models\FailedJob;
-use Illuminate\Support\Facades\Artisan;
 use Filament\Notifications\Notification;
-use Filament\Resources\Pages\ListRecords;
-use Modules\Xot\Filament\Pages\XotBaseListRecords;
+use Illuminate\Support\Facades\Artisan;
 use Modules\Job\Filament\Resources\FailedJobResource;
+use Modules\Job\Models\FailedJob;
+use Modules\Xot\Filament\Pages\XotBaseListRecords;
 
 class ListFailedJobs extends XotBaseListRecords
 {
@@ -23,7 +23,7 @@ class ListFailedJobs extends XotBaseListRecords
     {
         return [
             Action::make('retry_all')
-                
+
                 ->requiresConfirmation()
                 ->action(
                     static function (): void {
@@ -36,7 +36,7 @@ class ListFailedJobs extends XotBaseListRecords
                 ),
 
             Action::make('delete_all')
-                
+
                 ->requiresConfirmation()
                 ->color('danger')
                 ->action(
