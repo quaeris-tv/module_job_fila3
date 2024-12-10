@@ -57,14 +57,6 @@ class ListJobs extends XotBaseListRecords
         ];
     }
 
-    public function table(Table $table): Table
-    {
-        return $table
-            ->columns($this->getTableColumns())
-            ->filters($this->getTableFilters())
-            ->actions($this->getTableActions())
-            ->bulkActions($this->getTableBulkActions());
-    }
 
     protected function getHeaderActions(): array
     {

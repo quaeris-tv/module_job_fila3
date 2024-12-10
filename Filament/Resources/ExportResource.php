@@ -24,28 +24,9 @@ class ExportResource extends XotBaseResource
             ]);
     }
 
-    // public static function table(Table $table): Table
-    // {
-    //     return $table
-    //         ->columns([
-    //         ])
-    //         ->filters([
-    //         ])
-    //         ->actions([
-    //             Tables\Actions\EditAction::make(),
-    //         ])
-    //         ->bulkActions([
-    //             Tables\Actions\BulkActionGroup::make([
-    //                 Tables\Actions\DeleteBulkAction::make(),
-    //             ]),
-    //         ]);
-    // }
 
-    public static function getRelations(): array
-    {
-        return [
-        ];
-    }
+
+
 
     public static function getPages(): array
     {

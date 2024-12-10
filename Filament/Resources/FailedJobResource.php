@@ -54,7 +54,7 @@ class FailedJobResource extends XotBaseResource
             )->columns(4);
     }
 
-    public static function table(Table $table): Table
+    public static function tableOld(Table $table): Table
     {
         return $table
             ->defaultSort('id', 'desc')
@@ -115,6 +115,7 @@ class FailedJobResource extends XotBaseResource
                 ]
             );
     }
+
 
     public static function getPages(): array
     {
