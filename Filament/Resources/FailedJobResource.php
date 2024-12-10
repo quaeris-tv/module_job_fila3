@@ -123,8 +123,5 @@ class FailedJobResource extends XotBaseResource
         ];
     }
 
-    public static function getNavigationBadge(): ?string
-    {
-        return number_format(static::getModel()::count());
-    }
+
 }
