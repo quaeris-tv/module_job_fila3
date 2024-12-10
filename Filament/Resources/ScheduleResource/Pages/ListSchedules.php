@@ -144,20 +144,7 @@ class ListSchedules extends XotBaseListRecords
         ];
     }
 
-    public function table(Table $table): Table
-    {
-        return $table
-            ->columns($this->getTableColumns())
-            ->filters($this->getTableFilters())
-            ->actions($this->getTableActions())
-            ->bulkActions($this->getTableBulkActions());
-        /*
-        ->defaultSort(
-            config('filament-database-schedule.default_ordering'),
-            config('filament-database-schedule.default_ordering_direction')
-        )
-        */
-    }
+
 
     protected function getHeaderActions(): array
     {

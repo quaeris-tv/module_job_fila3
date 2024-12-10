@@ -54,50 +54,7 @@ class JobsWaitingResource extends XotBaseResource
             );
     }
 
-    // public static function table(Table $table): Table
-    // {
-    //     return $table
-    //         ->columns(
-    //             [
-    //                 TextColumn::make('status')
-    //                     ->badge()
-    //
-    //                     ->sortable()
-    //                     // ->formatStateUsing(static fn (string $state): string => __("jobs::translations.{$state}"))
-    //                     ->color(
-    //                         static fn (string $state): string => match ($state) {
-    //                             'running' => 'primary',
-    //                             'waiting' => 'success',
-    //                             'failed' => 'danger',
-    //                             default => 'secondary',
-    //                         }
-    //                     ),
-    //                 TextColumn::make('display_name')
-    //
-    //                     ->sortable(),
-    //                 TextColumn::make('queue')
-    //
-    //                     ->sortable(),
-    //                 TextColumn::make('attempts')
-    //
-    //                     ->sortable(),
-    //                 TextColumn::make('reserved_at')
-    //
-    //                     ->since()
-    //                     ->sortable(),
-    //                 TextColumn::make('created_at')
-    //
-    //                     ->since()
-    //                     ->sortable(),
-    //             ]
-    //         )
-    //         ->defaultSort('id', 'asc')
-    //         ->bulkActions(
-    //             [
-    //                 DeleteBulkAction::make(),
-    //             ]
-    //         );
-    // }
+
 
     public static function getRelations(): array
     {

@@ -19,35 +19,13 @@ use Modules\Xot\Filament\Pages\XotBaseListRecords;
 
 class ListExports extends XotBaseListRecords
 {
-   
+
 
     protected static string $resource = ExportResource::class;
 
-    public function table(Table $table): Table
-    {
-        return $table
-            // ->columns($this->getTableColumns())
-            ->columns($this->layoutView->getTableColumns())
-            ->contentGrid($this->layoutView->getTableContentGrid())
-            ->headerActions($this->getTableHeaderActions())
 
-            ->filters($this->getTableFilters())
-            ->filtersLayout(FiltersLayout::AboveContent)
-            ->persistFiltersInSession()
-            ->actions($this->getTableActions())
-            ->bulkActions($this->getTableBulkActions())
-            ->actionsPosition(ActionsPosition::BeforeColumns)
-            ->defaultSort(
-                column: 'created_at',
-                direction: 'DESC',
-            );
-    }
 
-    public function getGridTableColumns(): array
-    {
-        return [
-        ];
-    }
+
 
     public function getListTableColumns(): array
     {
