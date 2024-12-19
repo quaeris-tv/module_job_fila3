@@ -14,43 +14,44 @@ use Webmozart\Assert\Assert;
 /**
  * Modules\Job\Models\Task.
  *
- * @property string $id
- * @property string $description
- * @property string $command
- * @property string|null $parameters
- * @property string|null $expression
- * @property string $timezone
- * @property int $is_active
- * @property int $dont_overlap
- * @property int $run_in_maintenance
- * @property string|null $notification_email_address
- * @property string|null $notification_phone_number
- * @property string $notification_slack_webhook
- * @property int $auto_cleanup_num
- * @property string|null $auto_cleanup_type
- * @property int $run_on_one_server
- * @property int $run_in_background
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property int $order_column
- * @property string $status
- * @property string $priority_id
- * @property-read \Modules\Camping\Models\Profile|null $creator
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Job\Models\Frequency> $frequencies
- * @property-read int|null $frequencies_count
- * @property-read bool $activated
- * @property-read float $average_runtime
- * @property-read \Modules\Job\Models\Result|null $last_result
- * @property-read string $upcoming
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
- * @property-read int|null $notifications_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Job\Models\Result> $results
- * @property-read int|null $results_count
- * @property-read \Modules\Camping\Models\Profile|null $updater
+ * @property string                                                                                                        $id
+ * @property string                                                                                                        $description
+ * @property string                                                                                                        $command
+ * @property string|null                                                                                                   $parameters
+ * @property string|null                                                                                                   $expression
+ * @property string                                                                                                        $timezone
+ * @property int                                                                                                           $is_active
+ * @property int                                                                                                           $dont_overlap
+ * @property int                                                                                                           $run_in_maintenance
+ * @property string|null                                                                                                   $notification_email_address
+ * @property string|null                                                                                                   $notification_phone_number
+ * @property string                                                                                                        $notification_slack_webhook
+ * @property int                                                                                                           $auto_cleanup_num
+ * @property string|null                                                                                                   $auto_cleanup_type
+ * @property int                                                                                                           $run_on_one_server
+ * @property int                                                                                                           $run_in_background
+ * @property string|null                                                                                                   $created_by
+ * @property string|null                                                                                                   $updated_by
+ * @property Carbon|null                                                                                                   $created_at
+ * @property Carbon|null                                                                                                   $updated_at
+ * @property Carbon|null                                                                                                   $deleted_at
+ * @property string|null                                                                                                   $deleted_by
+ * @property int                                                                                                           $order_column
+ * @property string                                                                                                        $status
+ * @property string                                                                                                        $priority_id
+ *                                                                                                                                                     property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Job\Models\Frequency>                                  $frequencies
+ * @property int|null                                                                                                      $frequencies_count
+ * @property bool                                                                                                          $activated
+ * @property float                                                                                                         $average_runtime
+ * @property Result|null                                                                                                   $last_result
+ * @property string                                                                                                        $upcoming
+ * @property \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
+ * @property int|null                                                                                                      $notifications_count
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Job\Models\Result>                                     $results
+ * @property int|null                                                                                                      $results_count
+ * @property \Modules\Xot\Contracts\ProfileContract|null                                                                   $updater
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task query()
@@ -80,6 +81,7 @@ use Webmozart\Assert\Assert;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereTimezone($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
  */
 class Task extends BaseModel
