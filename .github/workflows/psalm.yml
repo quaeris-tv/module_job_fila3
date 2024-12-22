@@ -32,7 +32,7 @@ jobs:
 
       # Initialize Psalm
       - name: Initialize Psalm
-        run: ./vendor/bin/psalm --init
+        run: ./vendor/bin/psalm --init || echo "Psalm config already exists"
 
       # Enable the Laravel Plugin for Psalm
       - name: Enable Psalm Laravel Plugin
