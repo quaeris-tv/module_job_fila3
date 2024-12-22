@@ -37,12 +37,12 @@ jobs:
           curl -fsSL https://ollama.ai/install.sh | bash
 
       # Download and prepare the CodeLlama model
-      - name: Download CodeLlama Model
+      - name: Download Model
         run: |
-          ollama pull codellama
+          ollama pull llama3
 
       # Run Ollama for code improvement
-      - name: Run CodeLlama for Code Improvement
+      - name: Run llama3 for Code Improvement
         run: |
           echo "Analyze and improve the PHP code in the ./ directory.
           Make it robust, strictly typed, add PHPDoc, integrate Spatie Laravel Data and QueableActions,
