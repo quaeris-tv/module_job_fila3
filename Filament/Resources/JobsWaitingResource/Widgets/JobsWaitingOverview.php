@@ -15,9 +15,13 @@ use Modules\Job\Models\Job;
 use Modules\Job\Models\JobManager;
 use Modules\Job\Traits\FormatSeconds;
 
+/**
+ * --
+ */
 class JobsWaitingOverview extends BaseWidget
 {
     use FormatSeconds;
+
 
     protected function getCards(): array
     {
