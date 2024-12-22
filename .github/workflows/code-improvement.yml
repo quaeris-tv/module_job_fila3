@@ -39,10 +39,10 @@ jobs:
       # Download and prepare the CodeLlama model
       - name: Download Model
         run: |
-          ollama pull llama3
+          ollama pull codegemma
 
       # Run Ollama for code improvement
-      - name: Run llama3 for Code Improvement
+      - name: Run codegemma for Code Improvement
         run: |
           echo "Analyze and improve the PHP code in the ./ directory.
           Make it robust, strictly typed, add PHPDoc, integrate Spatie Laravel Data and QueableActions,
