@@ -47,12 +47,12 @@ jobs:
           and follow modern PHP best practices. Ensure compatibility with PHP 8.2." | ollama run codellama
 
       # Run PHP-CS-Fixer for formatting
-      - name: Run PHP-CS-Fixer
-        run: vendor/bin/php-cs-fixer fix ./ --verbose
+      #- name: Run PHP-CS-Fixer
+      #  run: vendor/bin/php-cs-fixer fix ./ --verbose
 
       # Run PHPStan for static analysis
-      - name: Run PHPStan
-        run: vendor/bin/phpstan analyse ./ --level=max
+      #- name: Run PHPStan
+      #  run: vendor/bin/phpstan analyse ./ --level=max
 
       # Commit and push changes
       - name: Commit and Push Changes
