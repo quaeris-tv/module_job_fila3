@@ -22,12 +22,12 @@
         "role": "Developer"
     }],
     "require": {
-        
+
     },
     "require-dev": {
-        
+
     },
-    "repositories": [
+    "repositories_comment": [
         {
             "type": "path",
             "url": "../User"
