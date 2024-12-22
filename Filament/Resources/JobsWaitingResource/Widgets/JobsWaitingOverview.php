@@ -16,7 +16,7 @@ use Modules\Job\Models\JobManager;
 use Modules\Job\Traits\FormatSeconds;
 
 /**
- * --.
+ * --..
  */
 class JobsWaitingOverview extends BaseWidget
 {
