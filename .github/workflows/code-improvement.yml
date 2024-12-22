@@ -1,4 +1,4 @@
-name: Code Improvement with Optimized Code Model
+name: Code Improvement with CodeLlama
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   improve-code:
-    name: Improve Code with Optimized Code Model
+    name: Improve Code with CodeLlama
     runs-on: ubuntu-latest
 
     steps:
@@ -34,26 +34,25 @@ jobs:
         run: |
           curl -fsSL https://ollama.ai/install.sh | bash
 
-      # Download and prepare the model (optimized for code improvement)
-      - name: Download Ollama Code Model
+      # Download and prepare the CodeLlama model
+      - name: Download CodeLlama Model
         run: |
           ollama pull codellama
 
       # Run Ollama for code improvement
-      - name: Run Ollama for Code Improvement
+      - name: Run CodeLlama for Code Improvement
         run: |
-          ollama run codellama \
-            --input "Analyze and improve the PHP code in the ./ directory.
-            Make it robust, solid, strictly typed, add PHPDoc, integrate Spatie Laravel Data and QueableActions,
-            and follow modern PHP best practices. Ensure compatibility with PHP 8.2."
+          echo "Analyze and improve the PHP code in the ./ directory.
+          Make it robust, strictly typed, add PHPDoc, integrate Spatie Laravel Data and QueableActions,
+          and follow modern PHP best practices. Ensure compatibility with PHP 8.2." | ollama run codellama
 
       # Run PHP-CS-Fixer for formatting
-      #- name: Run PHP-CS-Fixer
-      #  run: vendor/bin/php-cs-fixer fix --verbose
+      - name: Run PHP-CS-Fixer
+        run: vendor/bin/php-cs-fixer fix ./ --verbose
 
       # Run PHPStan for static analysis
-      #- name: Run PHPStan
-      #  run: vendor/bin/phpstan analyse --level=max
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse ./ --level=max
 
       # Commit and push changes
       - name: Commit and Push Changes
@@ -61,5 +60,5 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           git add .
-          git commit -m "Automated code improvements by Ollama and GitHub Actions" || echo "No changes to commit"
-          git push
+          git commit -m "Automated code improvements by CodeLlama and GitHub Actions" || echo "No changes to commit"
+          git push origin dev
