@@ -43,9 +43,9 @@ class JobsWaitingOverview extends BaseWidget
         }
 
         return [
-            Stat::make(__('jobs::translations.waiting_jobs'), $jobsWaiting->count ?? 0),
-            Stat::make(__('jobs::translations.execution_time'), $totalTime),
-            Stat::make(__('jobs::translations.average_time'), $averageTime),
+            Stat::make('waiting_jobs', $jobsWaiting->count ?? 0),
+            Stat::make('execution_time', $totalTime),
+            Stat::make('average_time', $averageTime),
         ];
     }
 }
