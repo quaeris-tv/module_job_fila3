@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @see https://gitlab.com/amvisor/filament-failed-jobs/-/blob/master/src/Resources/JobBatchesResource.php?ref_type=heads
+ * @see https://gitlab.com/amvisor/filament-failed-jobs/-/blob/master/src/resources/JobBatchesResource.php?ref_type=heads
  */
 
 declare(strict_types=1);

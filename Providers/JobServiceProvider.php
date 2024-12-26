@@ -26,18 +26,18 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 
 class JobServiceProvider extends XotBaseServiceProvider
 {
-    public string $module_name = 'job';
+    public string $name = 'job';
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
     public function boot(): void
     {
         parent::boot();
-    /*
-        $this->app->resolving(Schedule::class, function ($schedule) {
-            dddx($schedule);
-            //
-        });
-        */
+        /*
+            $this->app->resolving(Schedule::class, function ($schedule) {
+                dddx($schedule);
+                //
+            });
+            */
         // $this->app->booted(function () {
         // $schedule = $this->app->make(Schedule::class);
         // try {

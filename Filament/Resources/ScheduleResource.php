@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @see https://github.com/husam-tariq/filament-database-schedule/blob/main/src/Filament/Resources/ScheduleResource.php
+ * @see https://github.com/husam-tariq/filament-database-schedule/blob/main/src/Filament/resources/ScheduleResource.php
  */
 
 declare(strict_types=1);

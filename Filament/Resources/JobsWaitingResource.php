@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @see https://github.com/mooxphp/jobs/blob/main/src/Resources/JobsWaitingResource.php
+ * @see https://github.com/mooxphp/jobs/blob/main/src/resources/JobsWaitingResource.php
  */
 
 declare(strict_types=1);
