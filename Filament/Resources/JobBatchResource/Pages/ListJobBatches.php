@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @see https://gitlab.com/amvisor/filament-failed-jobs/-/blob/master/src/Resources/JobBatchesResource/Pages/ListJobBatches.php?ref_type=heads
+ * @see https://gitlab.com/amvisor/filament-failed-jobs/-/blob/master/src/resources/JobBatchesResource/Pages/ListJobBatches.php?ref_type=heads
  */
 
 declare(strict_types=1);
@@ -26,7 +26,7 @@ class ListJobBatches extends XotBaseListRecords
 
 
 
-       public function getListTableColumns(): array
+    public function getListTableColumns(): array
     {
         Assert::string($date_format = config('app.date_format'), '['.__LINE__.']['.class_basename(__CLASS__).']');
 
