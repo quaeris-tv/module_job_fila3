@@ -28,6 +28,7 @@ class FailedImportRowResource extends XotBaseResource
         ];
     }
 
+    /*
     public static function getPages(): array
     {
         return [
@@ -36,6 +37,5 @@ class FailedImportRowResource extends XotBaseResource
             'edit' => Pages\EditFailedImportRow::route('/{record}/edit'),
         ];
     }
-
-
+        */
 }

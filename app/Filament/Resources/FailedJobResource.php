@@ -34,8 +34,6 @@ class FailedJobResource extends XotBaseResource
 
     protected static ?string $navigationIcon = 'heroicon-o-exclamation-circle';
 
-    // protected static ?string $navigationGroup = 'jobs';
-
     public static function form(Form $form): Form
     {
         return $form
@@ -116,13 +114,10 @@ class FailedJobResource extends XotBaseResource
             );
     }
 
-
     public static function getPages(): array
     {
         return [
             'index' => ListFailedJobs::route('/'),
         ];
     }
-
-
 }
