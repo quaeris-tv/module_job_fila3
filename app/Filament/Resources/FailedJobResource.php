@@ -37,19 +37,22 @@ class FailedJobResource extends XotBaseResource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema(
-                [
-                    TextInput::make('uuid')->disabled()->columnSpan(4),
-                    TextInput::make('failed_at')->disabled(),
-                    TextInput::make('id')->disabled(),
-                    TextInput::make('connection')->disabled(),
-                    TextInput::make('queue')->disabled(),
+            ->schema(self::getFormSchema())
+            ->columns(4);
+    }
 
-                    // make text a little bit smaller because often a complete Stack Trace is shown:
-                    Textarea::make('exception')->disabled()->columnSpan(4)->extraInputAttributes(['style' => 'font-size: 80%;']),
-                    // JSONEditor::make('payload')->disabled()->columnSpan(4),
-                ]
-            )->columns(4);
+    public static function getFormSchema(): array
+    {
+        return [
+            TextInput::make('uuid')->disabled()->columnSpan(4),
+            TextInput::make('failed_at')->disabled(),
+            TextInput::make('id')->disabled(),
+            TextInput::make('connection')->disabled(),
+            TextInput::make('queue')->disabled(),
+            // make text a little bit smaller because often a complete Stack Trace is shown:
+            Textarea::make('exception')->disabled()->columnSpan(4)->extraInputAttributes(['style' => 'font-size: 80%;']),
+            // JSONEditor::make('payload')->disabled()->columnSpan(4),
+        ];
     }
 
     public static function tableOld(Table $table): Table

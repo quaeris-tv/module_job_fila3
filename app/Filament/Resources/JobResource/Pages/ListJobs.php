@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\JobResource\Pages;
 
-use Filament\Actions\CreateAction;
-use Filament\Tables\Actions\DeleteBulkAction;
-use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ViewColumn;
-use Filament\Tables\Table;
 use Modules\Job\Filament\Resources\JobResource;
 use Modules\Xot\Filament\Pages\XotBaseListRecords;
 
@@ -17,7 +13,7 @@ class ListJobs extends XotBaseListRecords
 {
     protected static string $resource = JobResource::class;
 
-    public function getTableColumns(): array
+    public function getListTableColumns(): array
     {
         return [
             TextColumn::make('id')
@@ -35,33 +31,6 @@ class ListJobs extends XotBaseListRecords
             // Tables\Columns\TextColumn::make('updated_at'),
             ViewColumn::make('payload')
                 ->view('job::filament.tables.columns.array'),
-        ];
-    }
-
-    public function getTableFilters(): array
-    {
-        return [];
-    }
-
-    public function getTableActions(): array
-    {
-        return [
-            EditAction::make(),
-        ];
-    }
-
-    public function getTableBulkActions(): array
-    {
-        return [
-            DeleteBulkAction::make(),
-        ];
-    }
-
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            CreateAction::make(),
         ];
     }
 }
