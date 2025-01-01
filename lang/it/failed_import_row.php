@@ -14,6 +14,10 @@ return [
         ],
     ],
     'fields' => [
+        'id' => ['label' => 'ID'],
+        'data' => ['label' => 'Data'],
+        'import_id' => ['label' => 'Import Id'],
+        'validation_error' => ['label' => 'Validation Error'],
         'name' => 'Nome',
         'guard_name' => 'Guard',
         'permissions' => 'Permessi',
