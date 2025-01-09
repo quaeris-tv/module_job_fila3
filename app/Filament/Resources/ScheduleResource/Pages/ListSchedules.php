@@ -146,12 +146,7 @@ class ListSchedules extends XotBaseListRecords
 
 
 
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
+    
 
     protected function getTableRecordUrlUsing(): ?\Closure
     {
