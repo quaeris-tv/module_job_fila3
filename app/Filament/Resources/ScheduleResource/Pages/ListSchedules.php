@@ -23,6 +23,9 @@ class ListSchedules extends XotBaseListRecords
     public function getTableColumns(): array
     {
         return [
+            Tables\Columns\TextColumn::make('id')
+                ->searchable()
+                ->sortable(),
             Tables\Columns\TextColumn::make('command')
                 ->getStateUsing(function ($record) {
                     if ('custom' === $record->command) {
@@ -32,11 +35,9 @@ class ListSchedules extends XotBaseListRecords
                     return $record->command;
                 })
                 ->searchable()
-                ->sortable(),
+                ->sortable()
+                ->wrap(),
             ScheduleArguments::make('params')
-                ->searchable()
-                ->sortable(),
-            ScheduleOptions::make('options')
                 ->searchable()
                 ->sortable(),
             Tables\Columns\TextColumn::make('expression')
@@ -46,15 +47,34 @@ class ListSchedules extends XotBaseListRecords
                 ->separator(',')
                 ->searchable()
                 ->sortable(),
-            Tables\Columns\TextColumn::make('created_at')
+            ScheduleOptions::make('options')
                 ->searchable()
-                ->sortable()
+                ->sortable(),
+            Tables\Columns\BadgeColumn::make('status')
+                ->enum([
+                    Schedule::STATUS_ACTIVE => static::trans('status.active'),
+                    Schedule::STATUS_INACTIVE => static::trans('status.inactive'),
+                    Schedule::STATUS_TRASHED => static::trans('status.trashed'),
+                ])
+                ->colors([
+                    'success' => Schedule::STATUS_ACTIVE,
+                    'warning' => Schedule::STATUS_INACTIVE,
+                    'danger' => Schedule::STATUS_TRASHED,
+                ])
+                ->icons([
+                    'heroicon-o-check-circle' => Schedule::STATUS_ACTIVE,
+                    'heroicon-o-document' => Schedule::STATUS_INACTIVE,
+                    'heroicon-o-x-circle' => Schedule::STATUS_TRASHED,
+                ])
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('created_at')
                 ->dateTime()
-                ->wrap(),
-            /*
+                ->searchable()
+                ->sortable(),
             Tables\Columns\TextColumn::make('updated_at')
                 ->getStateUsing(fn ($record) => $record->created_at == $record->updated_at ? static::trans('fields.never') : $record->updated_at)
-                ->wrap()
+                ->dateTime()
                 ->formatStateUsing(static function (Column $column, $state): ?string {
                     $format ??= config('tables.date_time_format');
                     if (blank($state) || $state == static::trans('fields.never')) {
@@ -65,46 +85,14 @@ class ListSchedules extends XotBaseListRecords
                         ->setTimezone($timezone ?? $column->getTimezone())
                         ->translatedFormat($format);
                 })
-                )
                 ->searchable()
                 ->sortable(),
-            */
-            /*
-            Tables\Columns\BadgeColumn::make('status')
-                              ->enum([
-                                  Schedule::STATUS_INACTIVE => static::trans('status.inactive'),
-                                  Schedule::STATUS_TRASHED => static::trans('status.trashed'),
-                                  Schedule::STATUS_ACTIVE => static::trans('status.active'),
-                              ])
-                              ->icons([
-                                  'heroicon-o-x',
-                                  'heroicon-o-document' => Schedule::STATUS_INACTIVE,
-                                  'heroicon-o-x-circle' => Schedule::STATUS_TRASHED,
-                                  'heroicon-o-check-circle' => Schedule::STATUS_ACTIVE,
-                              ])
-                ->colors([
-                    'warning' => Schedule::STATUS_INACTIVE,
-                    'success' => Schedule::STATUS_ACTIVE,
-                    'danger' => Schedule::STATUS_TRASHED,
-                ])
-                              )
-                              ->searchable()
-                              ->sortable(),
-            */
-        ];
-    }
-
-    public function getTaleFilters(): array
-    {
-        return [
-            Tables\Filters\TrashedFilter::make(),
         ];
     }
 
     public function getTableActions(): array
     {
         return [
-            // ActionGroup::make([
             Tables\Actions\EditAction::make()
                 ->hidden(fn ($record) => $record->trashed())
                 ->tooltip(__('filament-support::actions/edit.single.label')),
@@ -114,26 +102,10 @@ class ListSchedules extends XotBaseListRecords
                 ->tooltip(__('filament-support::actions/delete.single.label')),
             Tables\Actions\ForceDeleteAction::make()
                 ->tooltip(__('filament-support::actions/force-delete.single.label')),
-            /*
-            Tables\Actions\Action::make('toggle')
-                ->disabled(fn ($record) => $record->trashed())
-                ->icon(fn ($record) => Schedule::STATUS_ACTIVE == $record->status ? 'schedule-pause-fill' : 'schedule-play-fill')
-                          ->color(fn ($record) => Schedule::STATUS_ACTIVE == $record->status ? 'warning' : 'success')
-                          ->action(function ($record): void {
-                              if (Schedule::STATUS_ACTIVE == $record->status) {
-                                  $record->status = Schedule::STATUS_INACTIVE;
-                              } elseif (Schedule::STATUS_INACTIVE == $record->status) {
-                                  $record->status = Schedule::STATUS_ACTIVE;
-                              }
-                              $record->save();
-                          })
-                          ->tooltip(fn ($record) => Schedule::STATUS_ACTIVE == $record->status ? static::trans('buttons.inactivate') : static::trans('buttons.activate')),
-            */
             Tables\Actions\ViewAction::make()
                 ->icon('history')
                 ->color('gray')
                 ->tooltip(static::trans('buttons.history')),
-            // ]),
         ];
     }
 
@@ -143,10 +115,6 @@ class ListSchedules extends XotBaseListRecords
             Tables\Actions\DeleteBulkAction::make(),
         ];
     }
-
-
-
-    
 
     protected function getTableRecordUrlUsing(): ?\Closure
     {

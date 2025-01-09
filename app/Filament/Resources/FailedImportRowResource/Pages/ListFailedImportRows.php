@@ -15,10 +15,27 @@ class ListFailedImportRows extends XotBaseListRecords
     public function getListTableColumns(): array
     {
         return [
-            TextColumn::make('id'),
-            TextColumn::make('data'),
-            TextColumn::make('import_id'),
-            TextColumn::make('validation_error'),
+            'id' => TextColumn::make('id')
+                ->searchable()
+                ->sortable(),
+            'import_id' => TextColumn::make('import_id')
+                ->searchable()
+                ->sortable()
+                ->copyable(),
+            'data' => TextColumn::make('data')
+                ->searchable()
+                ->wrap()
+                ->limit(100),
+            'validation_error' => TextColumn::make('validation_error')
+                ->searchable()
+                ->wrap()
+                ->limit(200),
+            'created_at' => TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable(),
+            'updated_at' => TextColumn::make('updated_at')
+                ->dateTime()
+                ->sortable(),
         ];
     }
 }

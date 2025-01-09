@@ -38,19 +38,9 @@ class ListJobsWaiting extends XotBaseListRecords
         return __('jobs::translations.title');
     }
 
-
-
     public function getTableActions(): array
     {
-        return [
-            // ViewAction::make()
-            //     ->label(''),
-            // EditAction::make()
-            //     ->label(''),
-            // DeleteAction::make()
-            //     ->label('')
-            //     ->requiresConfirmation(),
-        ];
+        return [];
     }
 
     public function getTableBulkActions(): array
@@ -62,17 +52,25 @@ class ListJobsWaiting extends XotBaseListRecords
 
     public function getGridTableColumns(): array
     {
-        return [
-        ];
+        return [];
     }
 
     public function getListTableColumns(): array
     {
         return [
+            TextColumn::make('id')
+                ->searchable()
+                ->sortable(),
+            TextColumn::make('queue')
+                ->searchable()
+                ->sortable(),
+            TextColumn::make('display_name')
+                ->searchable()
+                ->sortable()
+                ->wrap(),
             TextColumn::make('status')
                 ->badge()
                 ->sortable()
-                // ->formatStateUsing(static fn (string $state): string => __("jobs::translations.{$state}"))
                 ->color(
                     static fn (string $state): string => match ($state) {
                         'running' => 'primary',
@@ -81,17 +79,20 @@ class ListJobsWaiting extends XotBaseListRecords
                         default => 'secondary',
                     }
                 ),
-            TextColumn::make('display_name')
-                ->sortable(),
-            TextColumn::make('queue')
-                ->sortable(),
             TextColumn::make('attempts')
+                ->numeric()
+                ->sortable(),
+            TextColumn::make('available_at')
+                ->dateTime()
                 ->sortable(),
             TextColumn::make('reserved_at')
-                ->since()
+                ->dateTime()
                 ->sortable(),
             TextColumn::make('created_at')
-                ->since()
+                ->dateTime()
+                ->sortable(),
+            TextColumn::make('updated_at')
+                ->dateTime()
                 ->sortable(),
         ];
     }
