@@ -24,16 +24,24 @@ class ListJobManagers extends XotBaseListRecords
 {
     protected static string $resource = JobManagerResource::class;
 
-
-
-
-
     public function getListTableColumns(): array
     {
         return [
+            TextColumn::make('id')
+                ->searchable()
+                ->sortable(),
+            TextColumn::make('job_id')
+                ->searchable()
+                ->sortable()
+                ->copyable(),
+            TextColumn::make('name')
+                ->searchable()
+                ->sortable(),
+            TextColumn::make('queue')
+                ->searchable()
+                ->sortable(),
             TextColumn::make('status')
                 ->badge()
-
                 ->sortable()
                 ->formatStateUsing(static fn (string $state): string => __("jobs::translations.{$state}"))
                 ->color(
@@ -44,20 +52,28 @@ class ListJobManagers extends XotBaseListRecords
                         default => 'secondary',
                     }
                 ),
-            TextColumn::make('name')
-
-                ->sortable(),
-            TextColumn::make('queue')
-
-                ->sortable(),
             TextColumn::make('progress')
-
-                ->formatStateUsing(static fn (string $state): string => "{$state}%")
+                ->numeric()
+                ->sortable()
+                ->formatStateUsing(fn ($state) => $state ? $state . '%' : null),
+            TextColumn::make('attempt')
+                ->numeric()
                 ->sortable(),
-            // ProgressColumn::make('progress')->color('warning'),
+            TextColumn::make('exception_message')
+                ->wrap()
+                ->limit(100)
+                ->visible(fn ($record) => $record->failed),
             TextColumn::make('started_at')
-
-                ->since()
+                ->dateTime()
+                ->sortable(),
+            TextColumn::make('finished_at')
+                ->dateTime()
+                ->sortable(),
+            TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable(),
+            TextColumn::make('updated_at')
+                ->dateTime()
                 ->sortable(),
         ];
     }
@@ -74,6 +90,4 @@ class ListJobManagers extends XotBaseListRecords
             DeleteBulkAction::make(),
         ];
     }
-
-    
 }
