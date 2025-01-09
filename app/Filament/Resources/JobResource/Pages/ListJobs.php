@@ -17,18 +17,30 @@ class ListJobs extends XotBaseListRecords
     {
         return [
             TextColumn::make('id')
-                ->sortable()
-                ->searchable(),
-            TextColumn::make('queue'),
-
-            // Tables\Columns\TextColumn::make('payload'),
-            TextColumn::make('attempts'),
-            TextColumn::make('reserved_at'),
-            TextColumn::make('available_at'),
-            TextColumn::make('created_at'),
-            // Tables\Columns\TextColumn::make('created_by'),
-            // Tables\Columns\TextColumn::make('updated_by'),
-            // Tables\Columns\TextColumn::make('updated_at'),
+                ->searchable()
+                ->sortable(),
+            TextColumn::make('queue')
+                ->searchable()
+                ->sortable(),
+            TextColumn::make('attempts')
+                ->numeric()
+                ->sortable(),
+            TextColumn::make('status')
+                ->badge()
+                ->color(fn (string $state): string => match ($state) {
+                    'running' => 'primary',
+                    'waiting' => 'warning',
+                    default => 'danger',
+                }),
+            TextColumn::make('reserved_at')
+                ->dateTime()
+                ->sortable(),
+            TextColumn::make('available_at')
+                ->dateTime()
+                ->sortable(),
+            TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable(),
             ViewColumn::make('payload')
                 ->view('job::filament.tables.columns.array'),
         ];
