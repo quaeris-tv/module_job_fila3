@@ -24,57 +24,43 @@ class ListJobBatches extends XotBaseListRecords
 {
     protected static string $resource = JobBatchResource::class;
 
-
-
     public function getListTableColumns(): array
     {
         Assert::string($date_format = config('app.date_format'), '['.__LINE__.']['.class_basename(__CLASS__).']');
 
         return [
+            TextColumn::make('id')
+                ->searchable()
+                ->sortable()
+                ->copyable(),
+            TextColumn::make('name')
+                ->searchable()
+                ->sortable()
+                ->wrap(),
+            TextColumn::make('total_jobs')
+                ->numeric()
+                ->sortable(),
+            TextColumn::make('pending_jobs')
+                ->numeric()
+                ->sortable(),
+            TextColumn::make('failed_jobs')
+                ->numeric()
+                ->sortable(),
+            TextColumn::make('progress')
+                ->formatStateUsing(fn ($record) => $record->progress() . '%')
+                ->sortable(),
+            TextColumn::make('failed_job_ids')
+                ->wrap()
+                ->limit(50),
             TextColumn::make('created_at')
                 ->dateTime($date_format)
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
-            TextColumn::make('id')
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
-            TextColumn::make('name')
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
+                ->sortable(),
             TextColumn::make('cancelled_at')
                 ->dateTime($date_format)
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
-            TextColumn::make('failed_at')
-                ->dateTime($date_format)
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
+                ->sortable(),
             TextColumn::make('finished_at')
                 ->dateTime($date_format)
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
-            TextColumn::make('total_jobs')
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
-            TextColumn::make('pending_jobs')
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
-            TextColumn::make('failed_jobs')
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
-            TextColumn::make('failed_job_ids')
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
+                ->sortable(),
         ];
     }
 
@@ -95,7 +81,6 @@ class ListJobBatches extends XotBaseListRecords
     {
         return [
             Action::make('prune_batches')
-
                 ->requiresConfirmation()
                 ->color('danger')
                 ->action(

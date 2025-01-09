@@ -14,20 +14,37 @@ class ListImports extends XotBaseListRecords
 {
     protected static string $resource = ImportResource::class;
 
-    public function getTableColumns(): array
+    public function getListTableColumns(): array
     {
         return [
-            TextColumn::make('id'),
-
-            TextColumn::make('completed_at'),
-            TextColumn::make('file_name'),
-            // TextColumn::make('file_path'),
-            TextColumn::make('importer'),
-            TextColumn::make('processed_rows'),
-            TextColumn::make('total_rows'),
-            TextColumn::make('successful_rows'),
-            // TextColumn::make('user_id'),
-            // TextColumn::make('user_type'),
+            'id' => TextColumn::make('id')
+                ->searchable()
+                ->sortable(),
+            'file_name' => TextColumn::make('file_name')
+                ->searchable()
+                ->sortable()
+                ->wrap(),
+            'importer' => TextColumn::make('importer')
+                ->searchable()
+                ->sortable(),
+            'processed_rows' => TextColumn::make('processed_rows')
+                ->numeric()
+                ->sortable(),
+            'total_rows' => TextColumn::make('total_rows')
+                ->numeric()
+                ->sortable(),
+            'successful_rows' => TextColumn::make('successful_rows')
+                ->numeric()
+                ->sortable(),
+            'completed_at' => TextColumn::make('completed_at')
+                ->dateTime()
+                ->sortable(),
+            'created_at' => TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable(),
+            'updated_at' => TextColumn::make('updated_at')
+                ->dateTime()
+                ->sortable(),
         ];
     }
 
@@ -47,11 +64,7 @@ class ListImports extends XotBaseListRecords
     public function getTableBulkActions(): array
     {
         return [
-            // Tables\Actions\BulkActionGroup::make([
             Tables\Actions\DeleteBulkAction::make(),
-            // ]),
         ];
     }
-
-    
 }
