@@ -1,42 +1,47 @@
-<?php
-
-declare(strict_types=1);
-
-return [
-    // 'resources' => 'Risorse',
-    'pages' => 'Pagine',
-    'widgets' => 'Widgets',
-    'navigation' => [
-        'name' => 'Job Fallito',
-        'plural' => 'Job Falliti',
-        'group' => [
-            'name' => 'Jobs',
-        ],
-    ],
-    'fields' => [
-        'name' => 'Nome',
-        'guard_name' => 'Guard',
-        'permissions' => 'Permessi',
-        'updated_at' => 'Aggiornato il',
-        'first_name' => 'Nome',
-        'last_name' => 'Cognome',
-        'select_all' => [
-            'name' => 'Seleziona Tutti',
-            'message' => '',
-        ],
-    ],
-    'actions' => [
-        'import' => [
-            'fields' => [
-                'import_file' => 'Seleziona un file XLS o CSV da caricare',
-            ],
-        ],
-        'export' => [
-            'filename_prefix' => 'Aree al',
-            'columns' => [
-                'name' => 'Nome area',
-                'parent_name' => 'Nome area livello superiore',
-            ],
-        ],
-    ],
-];
+<?php return array (
+  'pages' => 'Pagine',
+  'widgets' => 'Widgets',
+  'navigation' => 
+  array (
+    'name' => 'Job Fallito',
+    'plural' => 'Job Falliti',
+    'group' => 
+    array (
+      'name' => 'Jobs',
+    ),
+    'label' => 'failed job.navigation',
+  ),
+  'fields' => 
+  array (
+    'name' => 'Nome',
+    'guard_name' => 'Guard',
+    'permissions' => 'Permessi',
+    'updated_at' => 'Aggiornato il',
+    'first_name' => 'Nome',
+    'last_name' => 'Cognome',
+    'select_all' => 
+    array (
+      'name' => 'Seleziona Tutti',
+      'message' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'import' => 
+    array (
+      'fields' => 
+      array (
+        'import_file' => 'Seleziona un file XLS o CSV da caricare',
+      ),
+    ),
+    'export' => 
+    array (
+      'filename_prefix' => 'Aree al',
+      'columns' => 
+      array (
+        'name' => 'Nome area',
+        'parent_name' => 'Nome area livello superiore',
+      ),
+    ),
+  ),
+);
