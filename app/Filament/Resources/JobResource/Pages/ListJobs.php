@@ -7,7 +7,7 @@ namespace Modules\Job\Filament\Resources\JobResource\Pages;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ViewColumn;
 use Modules\Job\Filament\Resources\JobResource;
-use Modules\Xot\Filament\Pages\XotBaseListRecords;
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListJobs extends XotBaseListRecords
 {

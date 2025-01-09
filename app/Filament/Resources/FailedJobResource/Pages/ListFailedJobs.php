@@ -13,7 +13,7 @@ use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Artisan;
 use Modules\Job\Filament\Resources\FailedJobResource;
 use Modules\Job\Models\FailedJob;
-use Modules\Xot\Filament\Pages\XotBaseListRecords;
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListFailedJobs extends XotBaseListRecords
 {

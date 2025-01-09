@@ -6,7 +6,7 @@ namespace Modules\Job\Filament\Resources\FailedImportRowResource\Pages;
 
 use Filament\Tables\Columns\TextColumn;
 use Modules\Job\Filament\Resources\FailedImportRowResource;
-use Modules\Xot\Filament\Pages\XotBaseListRecords;
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListFailedImportRows extends XotBaseListRecords
 {
