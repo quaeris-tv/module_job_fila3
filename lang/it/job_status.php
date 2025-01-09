@@ -1,4 +1,5 @@
-<?php return array (
+<?php 
+return array (
   'resources' => 'Risorse',
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
@@ -9,8 +10,8 @@
     'group' => 
     array (
       'name' => 'Jobs',
-    ),
-    'label' => 'job status.navigation',
+    ),'
+    'label' => 'job status',
   ),
   'fields' => 
   array (
@@ -45,4 +46,4 @@
       ),
     ),
   ),
-);
+);

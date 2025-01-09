@@ -1,4 +1,5 @@
-<?php return array (
+<?php 
+return array (
   'pages' => 'Pagine',
   'widgets' => 'schedule',
   'navigation' => 
@@ -8,8 +9,8 @@
     'group' => 
     array (
       'name' => 'schedule',
-    ),
-    'label' => 'schedule.navigation',
+    ),'
+    'label' => 'schedule',
   ),
   'resource' => 
   array (
@@ -108,4 +109,4 @@
       ),
     ),
   ),
-);
+);

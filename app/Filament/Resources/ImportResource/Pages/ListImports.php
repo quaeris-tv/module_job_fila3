@@ -8,7 +8,7 @@ use Filament\Actions;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Job\Filament\Resources\ImportResource;
-use Modules\Xot\Filament\Pages\XotBaseListRecords;
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListImports extends XotBaseListRecords
 {

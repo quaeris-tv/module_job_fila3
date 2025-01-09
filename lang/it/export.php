@@ -1,4 +1,5 @@
-<?php return array (
+<?php 
+return array (
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
   'navigation' => 
@@ -8,8 +9,8 @@
     'group' => 
     array (
       'name' => 'Import/Export',
-    ),
-    'label' => 'export.navigation',
+    ),'
+    'label' => 'export',
   ),
   'fields' => 
   array (
@@ -44,4 +45,4 @@
       ),
     ),
   ),
-);
+);
