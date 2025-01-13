@@ -1,48 +1,165 @@
-<?php 
-return array (
+<?php return array (
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
   'navigation' => 
   array (
-    'name' => 'Job Fallito',
-    'plural' => 'Job Falliti',
+    'name' => 'Job Falliti',
+    'plural' => 'Jobs Falliti',
     'group' => 
     array (
       'name' => 'Jobs',
-    ),'
-    'label' => 'failed job',
+      'description' => 'Gestione dei jobs falliti',
+    ),
+    'label' => 'jobs falliti',
+  ),
+  'model' => 
+  array (
+    'label' => 'Job Fallito',
+    'plural' => 
+    array (
+      'label' => 'Jobs Falliti',
+    ),
   ),
   'fields' => 
   array (
-    'name' => 'Nome',
-    'guard_name' => 'Guard',
-    'permissions' => 'Permessi',
-    'updated_at' => 'Aggiornato il',
-    'first_name' => 'Nome',
-    'last_name' => 'Cognome',
-    'select_all' => 
+    'id' => 
     array (
-      'name' => 'Seleziona Tutti',
-      'message' => '',
+      'label' => 'ID',
     ),
+    'uuid' => 
+    array (
+      'label' => 'UUID',
+    ),
+    'connection' => 
+    array (
+      'label' => 'Connessione',
+    ),
+    'queue' => 
+    array (
+      'label' => 'Coda',
+    ),
+    'payload' => 
+    array (
+      'label' => 'Payload',
+    ),
+    'exception' => 
+    array (
+      'label' => 'Eccezione',
+    ),
+    'failed_at' => 
+    array (
+      'label' => 'Fallito il',
+    ),
+    'attempts' => 'Tentativi',
+    'max_attempts' => 'Tentativi Massimi',
+    'status' => 'Stato',
+    'created_at' => 'Creato il',
+    'updated_at' => 'Aggiornato il',
   ),
   'actions' => 
   array (
-    'import' => 
+    'retry' => 
     array (
-      'fields' => 
+      'label' => 'Riprova',
+      'modal' => 
       array (
-        'import_file' => 'Seleziona un file XLS o CSV da caricare',
+        'heading' => 'Riprova Job',
+        'description' => 'Vuoi riprovare ad eseguire questo job?',
+      ),
+      'messages' => 
+      array (
+        'success' => 'Job riavviato con successo',
       ),
     ),
-    'export' => 
+    'retry_all' => 
     array (
-      'filename_prefix' => 'Aree al',
-      'columns' => 
+      'label' => 'Riprova Tutti',
+      'modal' => 
       array (
-        'name' => 'Nome area',
-        'parent_name' => 'Nome area livello superiore',
+        'heading' => 'Riprova Tutti i Jobs',
+        'description' => 'Vuoi riprovare tutti i jobs falliti?',
+      ),
+      'messages' => 
+      array (
+        'success' => 'Jobs riavviati con successo',
+      ),
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina',
+      'modal' => 
+      array (
+        'heading' => 'Elimina Job',
+        'description' => 'Sei sicuro di voler eliminare questo job fallito?',
+      ),
+      'messages' => 
+      array (
+        'success' => 'Job eliminato con successo',
+      ),
+    ),
+    'delete_all' => 
+    array (
+      'label' => 'Elimina Tutti',
+      'modal' => 
+      array (
+        'heading' => 'Elimina Tutti i Jobs',
+        'description' => 'Sei sicuro di voler eliminare tutti i jobs falliti?',
+      ),
+      'messages' => 
+      array (
+        'success' => 'Jobs eliminati con successo',
+      ),
+    ),
+    'clear' => 
+    array (
+      'label' => 'Pulisci Tutto',
+      'modal' => 
+      array (
+        'heading' => 'Pulisci Jobs Falliti',
+        'description' => 'Sei sicuro di voler eliminare tutti i jobs falliti?',
+      ),
+      'messages' => 
+      array (
+        'success' => 'Jobs falliti eliminati con successo',
       ),
     ),
   ),
-);
+  'messages' => 
+  array (
+    'no_failed_jobs' => 'Nessun job fallito',
+    'retry_success' => 'Job riavviato con successo',
+    'retry_all_success' => 'Tutti i jobs sono stati riavviati con successo',
+    'delete_success' => 'Job eliminato con successo',
+    'delete_all_success' => 'Tutti i jobs sono stati eliminati con successo',
+    'clear_success' => 'Jobs falliti eliminati con successo',
+    'max_attempts_exceeded' => 'Il job ha superato il numero massimo di tentativi',
+    'job_not_found' => 'Job non trovato',
+    'invalid_payload' => 'Payload non valido',
+  ),
+  'statuses' => 
+  array (
+    'pending' => 'In Attesa',
+    'processing' => 'In Elaborazione',
+    'failed' => 'Fallito',
+    'completed' => 'Completato',
+    'cancelled' => 'Annullato',
+    'max_attempts' => 'Tentativi Massimi Superati',
+  ),
+  'error_types' => 
+  array (
+    'max_attempts' => 'Tentativi Massimi Superati',
+    'timeout' => 'Timeout',
+    'memory_limit' => 'Limite Memoria Superato',
+    'connection' => 'Errore di Connessione',
+    'queue' => 'Errore di Coda',
+    'payload' => 'Errore nel Payload',
+    'system' => 'Errore di Sistema',
+  ),
+  'plural' => 
+  array (
+    'model' => 
+    array (
+      'label' => 'failed job.plural.model',
+    ),
+  ),
+);
