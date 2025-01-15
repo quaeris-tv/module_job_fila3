@@ -4,12 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\ScheduleResource\Pages;
 
-use Filament\Actions;
 use Filament\Tables;
 use Filament\Tables\Columns\Column;
-use Filament\Tables\Table;
 use Illuminate\Support\Carbon;
-use Modules\Job\Filament\Columns\ActionGroup;
 use Modules\Job\Filament\Columns\ScheduleArguments;
 use Modules\Job\Filament\Columns\ScheduleOptions;
 use Modules\Job\Filament\Resources\ScheduleResource;
@@ -28,7 +25,7 @@ class ListSchedules extends XotBaseListRecords
                 ->sortable(),
             Tables\Columns\TextColumn::make('command')
                 ->getStateUsing(function ($record) {
-                    if ('custom' === $record->command) {
+                    if ($record->command === 'custom') {
                         return $record->command_custom;
                     }
 

@@ -8,9 +8,9 @@ return [
         'plural' => 'Job Managers',
         'group' => [
             'name' => 'Jobs',
-            'description' => 'Gestione avanzata dei processi'
+            'description' => 'Gestione avanzata dei processi',
         ],
-        'label' => 'job manager'
+        'label' => 'job manager',
     ],
     'fields' => [
         'id' => 'ID',
@@ -54,42 +54,42 @@ return [
             'label' => 'Esegui',
             'modal' => [
                 'heading' => 'Esegui Job Manager',
-                'description' => 'Vuoi eseguire questo job manager?'
+                'description' => 'Vuoi eseguire questo job manager?',
             ],
             'messages' => [
-                'success' => 'Job manager avviato con successo'
-            ]
+                'success' => 'Job manager avviato con successo',
+            ],
         ],
         'pause' => [
             'label' => 'Pausa',
             'modal' => [
                 'heading' => 'Metti in Pausa',
-                'description' => 'Vuoi mettere in pausa questo job manager?'
+                'description' => 'Vuoi mettere in pausa questo job manager?',
             ],
             'messages' => [
-                'success' => 'Job manager messo in pausa con successo'
-            ]
+                'success' => 'Job manager messo in pausa con successo',
+            ],
         ],
         'resume' => [
             'label' => 'Riprendi',
             'modal' => [
                 'heading' => 'Riprendi Esecuzione',
-                'description' => 'Vuoi riprendere l\'esecuzione di questo job manager?'
+                'description' => 'Vuoi riprendere l\'esecuzione di questo job manager?',
             ],
             'messages' => [
-                'success' => 'Job manager ripreso con successo'
-            ]
+                'success' => 'Job manager ripreso con successo',
+            ],
         ],
         'delete' => [
             'label' => 'Elimina',
             'modal' => [
                 'heading' => 'Elimina Job Manager',
-                'description' => 'Sei sicuro di voler eliminare questo job manager?'
+                'description' => 'Sei sicuro di voler eliminare questo job manager?',
             ],
             'messages' => [
-                'success' => 'Job manager eliminato con successo'
-            ]
-        ]
+                'success' => 'Job manager eliminato con successo',
+            ],
+        ],
     ],
     'messages' => [
         'no_jobs' => 'Nessun job manager presente',
@@ -97,24 +97,24 @@ return [
         'manager_paused' => 'Job manager in pausa',
         'manager_resumed' => 'Job manager ripreso',
         'manager_completed' => 'Job manager completato',
-        'manager_failed' => 'Job manager fallito'
+        'manager_failed' => 'Job manager fallito',
     ],
     'statuses' => [
         'active' => 'Attivo',
         'paused' => 'In Pausa',
         'completed' => 'Completato',
-        'failed' => 'Fallito'
+        'failed' => 'Fallito',
     ],
     'types' => [
         'scheduler' => 'Schedulatore',
         'queue' => 'Coda',
         'worker' => 'Worker',
-        'monitor' => 'Monitor'
+        'monitor' => 'Monitor',
     ],
     'priorities' => [
         'low' => 'Bassa',
         'normal' => 'Normale',
         'high' => 'Alta',
-        'urgent' => 'Urgente'
-    ]
+        'urgent' => 'Urgente',
+    ],
 ];
