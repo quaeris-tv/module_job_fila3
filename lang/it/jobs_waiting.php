@@ -8,9 +8,9 @@ return [
         'plural' => 'Jobs in Attesa',
         'group' => [
             'name' => 'Jobs',
-            'description' => 'Gestione dei jobs in attesa di esecuzione'
+            'description' => 'Gestione dei jobs in attesa di esecuzione',
         ],
-        'label' => 'jobs in attesa'
+        'label' => 'jobs in attesa',
     ],
     'fields' => [
         'id' => 'ID',
@@ -52,55 +52,55 @@ return [
             'label' => 'Processa',
             'modal' => [
                 'heading' => 'Processa Job',
-                'description' => 'Vuoi processare questo job in attesa?'
+                'description' => 'Vuoi processare questo job in attesa?',
             ],
             'messages' => [
-                'success' => 'Job processato con successo'
-            ]
+                'success' => 'Job processato con successo',
+            ],
         ],
         'cancel' => [
             'label' => 'Cancella',
             'modal' => [
                 'heading' => 'Cancella Job',
-                'description' => 'Vuoi cancellare questo job in attesa?'
+                'description' => 'Vuoi cancellare questo job in attesa?',
             ],
             'messages' => [
-                'success' => 'Job cancellato con successo'
-            ]
+                'success' => 'Job cancellato con successo',
+            ],
         ],
         'retry' => [
             'label' => 'Riprova',
             'modal' => [
                 'heading' => 'Riprova Job',
-                'description' => 'Vuoi riprovare questo job?'
+                'description' => 'Vuoi riprovare questo job?',
             ],
             'messages' => [
-                'success' => 'Job riprovato con successo'
-            ]
-        ]
+                'success' => 'Job riprovato con successo',
+            ],
+        ],
     ],
     'messages' => [
         'no_jobs' => 'Nessun job in attesa',
         'job_processed' => 'Job processato',
         'job_cancelled' => 'Job cancellato',
-        'job_retried' => 'Job riprovato'
+        'job_retried' => 'Job riprovato',
     ],
     'statuses' => [
         'waiting' => 'In Attesa',
         'reserved' => 'Riservato',
         'delayed' => 'Ritardato',
-        'ready' => 'Pronto'
+        'ready' => 'Pronto',
     ],
     'priorities' => [
         'low' => 'Bassa',
         'normal' => 'Normale',
         'high' => 'Alta',
-        'urgent' => 'Urgente'
+        'urgent' => 'Urgente',
     ],
     'types' => [
         'default' => 'Default',
         'scheduled' => 'Schedulato',
         'recurring' => 'Ricorrente',
-        'batch' => 'Batch'
-    ]
+        'batch' => 'Batch',
+    ],
 ];

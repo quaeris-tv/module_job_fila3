@@ -8,9 +8,9 @@ return [
         'plural' => 'Jobs',
         'group' => [
             'name' => 'Jobs',
-            'description' => 'Gestione dei processi in background'
+            'description' => 'Gestione dei processi in background',
         ],
-        'label' => 'jobs'
+        'label' => 'jobs',
     ],
     'fields' => [
         'id' => 'ID',
@@ -52,52 +52,52 @@ return [
             'label' => 'Esegui',
             'modal' => [
                 'heading' => 'Esegui Job',
-                'description' => 'Vuoi eseguire questo job?'
+                'description' => 'Vuoi eseguire questo job?',
             ],
             'messages' => [
-                'success' => 'Job avviato con successo'
-            ]
+                'success' => 'Job avviato con successo',
+            ],
         ],
         'stop' => [
             'label' => 'Ferma',
             'modal' => [
                 'heading' => 'Ferma Job',
-                'description' => 'Vuoi fermare questo job?'
+                'description' => 'Vuoi fermare questo job?',
             ],
             'messages' => [
-                'success' => 'Job fermato con successo'
-            ]
+                'success' => 'Job fermato con successo',
+            ],
         ],
         'delete' => [
             'label' => 'Elimina',
             'modal' => [
                 'heading' => 'Elimina Job',
-                'description' => 'Sei sicuro di voler eliminare questo job?'
+                'description' => 'Sei sicuro di voler eliminare questo job?',
             ],
             'messages' => [
-                'success' => 'Job eliminato con successo'
-            ]
-        ]
+                'success' => 'Job eliminato con successo',
+            ],
+        ],
     ],
     'messages' => [
         'no_jobs' => 'Nessun job presente',
         'job_started' => 'Job avviato',
         'job_stopped' => 'Job fermato',
         'job_completed' => 'Job completato',
-        'job_failed' => 'Job fallito'
+        'job_failed' => 'Job fallito',
     ],
     'statuses' => [
         'pending' => 'In Attesa',
         'processing' => 'In Elaborazione',
         'completed' => 'Completato',
         'failed' => 'Fallito',
-        'stopped' => 'Fermato'
+        'stopped' => 'Fermato',
     ],
     'types' => [
         'import' => 'Importazione',
         'export' => 'Esportazione',
         'process' => 'Elaborazione',
         'notification' => 'Notifica',
-        'cleanup' => 'Pulizia'
-    ]
+        'cleanup' => 'Pulizia',
+    ],
 ];

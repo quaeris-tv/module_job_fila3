@@ -8,17 +8,10 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\JobManagerResource\Pages;
 
-use Filament\Actions;
-use Filament\Tables\Table;
-use Modules\UI\Enums\TableLayoutEnum;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Enums\FiltersLayout;
-use Filament\Resources\Pages\ListRecords;
-use Filament\Tables\Enums\ActionsPosition;
-use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Tables\Actions\DeleteBulkAction;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+use Filament\Tables\Columns\TextColumn;
 use Modules\Job\Filament\Resources\JobManagerResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListJobManagers extends XotBaseListRecords
 {
@@ -55,7 +48,7 @@ class ListJobManagers extends XotBaseListRecords
             TextColumn::make('progress')
                 ->numeric()
                 ->sortable()
-                ->formatStateUsing(fn ($state) => $state ? $state . '%' : null),
+                ->formatStateUsing(fn ($state) => $state ? $state.'%' : null),
             TextColumn::make('attempt')
                 ->numeric()
                 ->sortable(),

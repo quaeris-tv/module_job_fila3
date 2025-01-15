@@ -8,9 +8,9 @@ return [
         'plural' => 'Imports',
         'group' => [
             'name' => 'Import/Export',
-            'description' => 'Gestione delle importazioni dati'
+            'description' => 'Gestione delle importazioni dati',
         ],
-        'label' => 'import'
+        'label' => 'import',
     ],
     'fields' => [
         'id' => 'ID',
@@ -44,44 +44,44 @@ return [
             'label' => 'Importa',
             'modal' => [
                 'heading' => 'Importa Dati',
-                'description' => 'Seleziona un file da importare'
+                'description' => 'Seleziona un file da importare',
             ],
             'messages' => [
-                'success' => 'Importazione avviata con successo'
+                'success' => 'Importazione avviata con successo',
             ],
             'fields' => [
-                'import_file' => 'Seleziona un file XLS o CSV da caricare'
-            ]
+                'import_file' => 'Seleziona un file XLS o CSV da caricare',
+            ],
         ],
         'retry' => [
             'label' => 'Riprova',
             'modal' => [
                 'heading' => 'Riprova Importazione',
-                'description' => 'Vuoi riprovare l\'importazione delle righe fallite?'
+                'description' => 'Vuoi riprovare l\'importazione delle righe fallite?',
             ],
             'messages' => [
-                'success' => 'Importazione riprovata con successo'
-            ]
+                'success' => 'Importazione riprovata con successo',
+            ],
         ],
         'delete' => [
             'label' => 'Elimina',
             'modal' => [
                 'heading' => 'Elimina Import',
-                'description' => 'Sei sicuro di voler eliminare questa importazione?'
+                'description' => 'Sei sicuro di voler eliminare questa importazione?',
             ],
             'messages' => [
-                'success' => 'Import eliminato con successo'
-            ]
+                'success' => 'Import eliminato con successo',
+            ],
         ],
         'download_errors' => [
             'label' => 'Scarica Errori',
             'modal' => [
                 'heading' => 'Scarica Log Errori',
-                'description' => 'Vuoi scaricare il log degli errori di importazione?'
+                'description' => 'Vuoi scaricare il log degli errori di importazione?',
             ],
             'messages' => [
-                'success' => 'Log errori scaricato con successo'
-            ]
+                'success' => 'Log errori scaricato con successo',
+            ],
         ],
         'export' => [
             'filename_prefix' => 'Aree al',
@@ -98,25 +98,25 @@ return [
         'import_failed' => 'Importazione fallita',
         'file_not_found' => 'File non trovato',
         'invalid_format' => 'Formato non valido',
-        'row_error' => 'Errore alla riga :row: :message'
+        'row_error' => 'Errore alla riga :row: :message',
     ],
     'statuses' => [
         'pending' => 'In Attesa',
         'processing' => 'In Elaborazione',
         'completed' => 'Completato',
         'failed' => 'Fallito',
-        'partial' => 'Completato Parzialmente'
+        'partial' => 'Completato Parzialmente',
     ],
     'types' => [
         'csv' => 'CSV',
         'excel' => 'Excel',
         'json' => 'JSON',
-        'xml' => 'XML'
+        'xml' => 'XML',
     ],
     'formats' => [
         'standard' => 'Standard',
         'extended' => 'Esteso',
         'minimal' => 'Minimo',
-        'custom' => 'Personalizzato'
-    ]
+        'custom' => 'Personalizzato',
+    ],
 ];

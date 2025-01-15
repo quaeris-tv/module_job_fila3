@@ -8,9 +8,9 @@ return [
         'plural' => 'Schedulatori',
         'group' => [
             'name' => 'Jobs',
-            'description' => 'Gestione dei job schedulati'
+            'description' => 'Gestione dei job schedulati',
         ],
-        'label' => 'schedulatore'
+        'label' => 'schedulatore',
     ],
     'resource' => [
         'single' => 'Schedule',
@@ -60,7 +60,7 @@ return [
         'last_run' => 'Ultima Esecuzione',
         'next_run' => 'Prossima Esecuzione',
         'error' => 'Errore',
-        'run_in_maintenance' => 'Esegui in Manutenzione'
+        'run_in_maintenance' => 'Esegui in Manutenzione',
     ],
     'messages' => [
         'no-records-found' => 'No records found.',
@@ -80,14 +80,14 @@ return [
         'schedule_started' => 'Schedule avviato',
         'schedule_completed' => 'Schedule completato',
         'schedule_failed' => 'Schedule fallito',
-        'invalid_expression' => 'Espressione cron non valida'
+        'invalid_expression' => 'Espressione cron non valida',
     ],
     'status' => [
         'active' => 'Active',
         'inactive' => 'Inactive',
         'trashed' => 'Trashed',
         'running' => 'In Esecuzione',
-        'failed' => 'Fallito'
+        'failed' => 'Fallito',
     ],
     'buttons' => [
         'inactivate' => 'Inactivate',
@@ -97,32 +97,32 @@ return [
             'label' => 'Esegui Ora',
             'modal' => [
                 'heading' => 'Esegui Schedule',
-                'description' => 'Vuoi eseguire questo schedule ora?'
+                'description' => 'Vuoi eseguire questo schedule ora?',
             ],
             'messages' => [
-                'success' => 'Schedule eseguito con successo'
-            ]
+                'success' => 'Schedule eseguito con successo',
+            ],
         ],
         'toggle' => [
             'label' => 'Attiva/Disattiva',
             'modal' => [
                 'heading' => 'Modifica Stato',
-                'description' => 'Vuoi modificare lo stato di questo schedule?'
+                'description' => 'Vuoi modificare lo stato di questo schedule?',
             ],
             'messages' => [
-                'success' => 'Stato modificato con successo'
-            ]
+                'success' => 'Stato modificato con successo',
+            ],
         ],
         'delete' => [
             'label' => 'Elimina',
             'modal' => [
                 'heading' => 'Elimina Schedule',
-                'description' => 'Sei sicuro di voler eliminare questo schedule?'
+                'description' => 'Sei sicuro di voler eliminare questo schedule?',
             ],
             'messages' => [
-                'success' => 'Schedule eliminato con successo'
-            ]
-        ]
+                'success' => 'Schedule eliminato con successo',
+            ],
+        ],
     ],
     'validation' => [
         'cron' => 'The field must be filled in the cron expression format.',
@@ -140,7 +140,7 @@ return [
                 'name' => 'Nome area',
                 'parent_name' => 'Nome area livello superiore',
             ],
-        ]
+        ],
     ],
     'frequencies' => [
         'everyMinute' => 'Ogni Minuto',
@@ -153,7 +153,7 @@ return [
         'weekly' => 'Ogni Settimana',
         'monthly' => 'Ogni Mese',
         'quarterly' => 'Ogni Trimestre',
-        'yearly' => 'Ogni Anno'
+        'yearly' => 'Ogni Anno',
     ],
     'days' => [
         'sunday' => 'Domenica',
@@ -162,7 +162,7 @@ return [
         'wednesday' => 'Mercoledì',
         'thursday' => 'Giovedì',
         'friday' => 'Venerdì',
-        'saturday' => 'Sabato'
+        'saturday' => 'Sabato',
     ],
     'cron' => [
         'help' => [
@@ -176,8 +176,8 @@ return [
                 'every_minute' => '* * * * * - Ogni minuto',
                 'every_hour' => '0 * * * * - Ogni ora',
                 'every_day' => '0 0 * * * - Ogni giorno a mezzanotte',
-                'every_monday' => '0 0 * * 1 - Ogni lunedì a mezzanotte'
-            ]
-        ]
-    ]
+                'every_monday' => '0 0 * * 1 - Ogni lunedì a mezzanotte',
+            ],
+        ],
+    ],
 ];

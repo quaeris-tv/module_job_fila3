@@ -8,9 +8,9 @@ return [
         'plural' => 'Exports',
         'group' => [
             'name' => 'Import/Export',
-            'description' => 'Gestione delle esportazioni dati'
+            'description' => 'Gestione delle esportazioni dati',
         ],
-        'label' => 'export'
+        'label' => 'export',
     ],
     'fields' => [
         'id' => 'ID',
@@ -48,10 +48,10 @@ return [
             'label' => 'Esporta',
             'modal' => [
                 'heading' => 'Esporta Dati',
-                'description' => 'Seleziona le opzioni per l\'esportazione'
+                'description' => 'Seleziona le opzioni per l\'esportazione',
             ],
             'messages' => [
-                'success' => 'Esportazione avviata con successo'
+                'success' => 'Esportazione avviata con successo',
             ],
             'filename_prefix' => 'Aree al',
             'columns' => [
@@ -63,22 +63,22 @@ return [
             'label' => 'Scarica',
             'modal' => [
                 'heading' => 'Scarica File',
-                'description' => 'Vuoi scaricare il file esportato?'
+                'description' => 'Vuoi scaricare il file esportato?',
             ],
             'messages' => [
-                'success' => 'File scaricato con successo'
-            ]
+                'success' => 'File scaricato con successo',
+            ],
         ],
         'delete' => [
             'label' => 'Elimina',
             'modal' => [
                 'heading' => 'Elimina Export',
-                'description' => 'Sei sicuro di voler eliminare questa esportazione?'
+                'description' => 'Sei sicuro di voler eliminare questa esportazione?',
             ],
             'messages' => [
-                'success' => 'Export eliminato con successo'
-            ]
-        ]
+                'success' => 'Export eliminato con successo',
+            ],
+        ],
     ],
     'messages' => [
         'no_exports' => 'Nessuna esportazione presente',
@@ -86,26 +86,26 @@ return [
         'export_completed' => 'Esportazione completata',
         'export_failed' => 'Esportazione fallita',
         'file_not_found' => 'File non trovato',
-        'invalid_format' => 'Formato non valido'
+        'invalid_format' => 'Formato non valido',
     ],
     'statuses' => [
         'pending' => 'In Attesa',
         'processing' => 'In Elaborazione',
         'completed' => 'Completato',
         'failed' => 'Fallito',
-        'downloaded' => 'Scaricato'
+        'downloaded' => 'Scaricato',
     ],
     'types' => [
         'csv' => 'CSV',
         'excel' => 'Excel',
         'json' => 'JSON',
         'pdf' => 'PDF',
-        'xml' => 'XML'
+        'xml' => 'XML',
     ],
     'formats' => [
         'standard' => 'Standard',
         'extended' => 'Esteso',
         'minimal' => 'Minimo',
-        'custom' => 'Personalizzato'
-    ]
+        'custom' => 'Personalizzato',
+    ],
 ];
