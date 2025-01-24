@@ -79,11 +79,19 @@ class ScheduleResource extends XotBaseResource
         return [
             Section::make([
                 Select::make('command')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                     
 =======
                     )
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                    
+=======
+                    )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
                     // ->options(
                     //     fn () => config('filament-database-schedule.commands.enable_custom') ?
@@ -107,11 +115,19 @@ class ScheduleResource extends XotBaseResource
                     }),
                 TextInput::make('command_custom')
                     ->placeholder(static::trans('messages.custom-command-here'))
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                     
 =======
                     )
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                    
+=======
+                    )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                     ->required()
                     ->visible(fn (Get $get): bool => 'custom' === $get('command') && config('filament-database-schedule.commands.enable_custom')),
                 Repeater::make('params')
@@ -139,11 +155,19 @@ class ScheduleResource extends XotBaseResource
                     ->reorderable(false),
 
                 // CheckboxList::make('options')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 //  
 =======
                 //  )
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                //  
+=======
+                //  )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                 //     ->options(
                 //         fn (Get $get) => collect(static::$commands->firstWhere('name', $get('command'))['options']['withoutValue'] ?? [])
                 //             ->mapWithKeys(function ($value) {
@@ -157,16 +181,28 @@ class ScheduleResource extends XotBaseResource
                 TextInput::make('expression')
                     ->placeholder('* * * * *')
                     ->rules([new Corn()])
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                     
 =======
                     )
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                    
+=======
+                    )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                     // ->helperText(fn (): ?\Illuminate\Support\HtmlString => config('filament-database-schedule.tool-help-cron-expression.enable') ? new HtmlString(" <a href='".config('filament-database-schedule.tool-help-cron-expression.url')."' target='_blank'>".static::trans('messages.help-cron-expression').' </a>') : null)
                     ->required(),
                 TagsInput::make('environments')
                     ->placeholder(null)
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
                     ,
                 TextInput::make('log_filename')
                     
@@ -224,7 +260,11 @@ class ScheduleResource extends XotBaseResource
                     ),
                 Toggle::make('run_in_background')
                     ),
+<<<<<<< Updated upstream
 >>>>>>> origin/v0.2.10
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
             ])
                 ->inlineLabel(false),
         ];

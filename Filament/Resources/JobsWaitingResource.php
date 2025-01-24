@@ -61,11 +61,19 @@ class JobsWaitingResource extends XotBaseResource
     //             [
     //                 TextColumn::make('status')
     //                     ->badge()
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     //                     
 =======
     //                     )
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+    //                     
+=======
+    //                     )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     //                     ->sortable()
     //                     // ->formatStateUsing(static fn (string $state): string => __("jobs::translations.{$state}"))
     //                     ->color(
@@ -77,7 +85,11 @@ class JobsWaitingResource extends XotBaseResource
     //                         }
     //                     ),
     //                 TextColumn::make('display_name')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
     //                     
     //                     ->sortable(),
     //                 TextColumn::make('queue')
@@ -107,7 +119,11 @@ class JobsWaitingResource extends XotBaseResource
     //                     ->sortable(),
     //                 TextColumn::make('created_at')
     //                     )
+<<<<<<< Updated upstream
 >>>>>>> origin/v0.2.10
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     //                     ->since()
     //                     ->sortable(),
     //             ]
