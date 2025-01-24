@@ -93,12 +93,20 @@ class ViewSchedule extends Page implements HasTable
                         return $state->diffInSeconds($record->created_at).' seconds';
                     }),
                 Tables\Columns\TextColumn::make('output')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
                     
 =======
 
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                    
+=======
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                     ->formatStateUsing(static fn ($state): string => (count(explode('<br />', nl2br((string) $state))) - 1).' rows of output'),
 =======
                     ->formatStateUsing(static fn (string $state): string => (count(explode('<br />', nl2br((string) $state))) - 1).' rows of output'),

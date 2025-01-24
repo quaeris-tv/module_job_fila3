@@ -89,10 +89,18 @@ class ListJobsWaiting extends XotBaseListRecords
         return [
             TextColumn::make('status')
                 ->badge()
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 
 =======
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                
+=======
+                )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                 ->sortable()
                 // ->formatStateUsing(static fn (string $state): string => __("jobs::translations.{$state}"))
                 ->color(
@@ -104,7 +112,11 @@ class ListJobsWaiting extends XotBaseListRecords
                     }
                 ),
             TextColumn::make('display_name')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
                 
                 ->sortable(),
             TextColumn::make('queue')
@@ -120,6 +132,7 @@ class ListJobsWaiting extends XotBaseListRecords
             TextColumn::make('created_at')
                 
 =======
+<<<<<<< Updated upstream
                 ->sortable(),
             TextColumn::make('queue')
                 ->sortable(),
@@ -130,6 +143,23 @@ class ListJobsWaiting extends XotBaseListRecords
                 ->sortable(),
             TextColumn::make('created_at')
 >>>>>>> origin/v0.2.10
+=======
+                )
+                ->sortable(),
+            TextColumn::make('queue')
+                )
+                ->sortable(),
+            TextColumn::make('attempts')
+                )
+                ->sortable(),
+            TextColumn::make('reserved_at')
+                )
+                ->since()
+                ->sortable(),
+            TextColumn::make('created_at')
+                )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                 ->since()
                 ->sortable(),
         ];

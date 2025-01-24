@@ -31,7 +31,11 @@ class ListSchedules extends XotBaseListRecords
 
                     return $record->command;
                 })
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
                 
                 ->searchable()
                 ->sortable(),
@@ -50,6 +54,7 @@ class ListSchedules extends XotBaseListRecords
             Tables\Columns\TagsColumn::make('environments')
                 
 =======
+<<<<<<< Updated upstream
                 ->searchable()
                 ->sortable(),
             ScheduleArguments::make('params')
@@ -63,14 +68,42 @@ class ListSchedules extends XotBaseListRecords
                 ->sortable(),
             Tables\Columns\TagsColumn::make('environments')
 >>>>>>> origin/v0.2.10
+=======
+                )
+                ->searchable()
+                ->sortable(),
+            ScheduleArguments::make('params')
+                )
+                ->searchable()
+                ->sortable(),
+            ScheduleOptions::make('options')
+                )
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('expression')
+                )
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\TagsColumn::make('environments')
+                )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                 ->separator(',')
                 ->searchable()
                 ->sortable(),
             Tables\Columns\TextColumn::make('created_at')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 
 =======
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                
+=======
+                )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                 ->searchable()
                 ->sortable()
                 ->dateTime()
@@ -89,11 +122,19 @@ class ListSchedules extends XotBaseListRecords
                         ->setTimezone($timezone ?? $column->getTimezone())
                         ->translatedFormat($format);
                 })
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 
 =======
                 )
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                
+=======
+                )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                 ->searchable()
                 ->sortable(),
             */
@@ -115,11 +156,19 @@ class ListSchedules extends XotBaseListRecords
                     'success' => Schedule::STATUS_ACTIVE,
                     'danger' => Schedule::STATUS_TRASHED,
                 ])
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                               
 =======
                               )
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                              
+=======
+                              )
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                               ->searchable()
                               ->sortable(),
             */

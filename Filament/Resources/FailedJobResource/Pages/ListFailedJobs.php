@@ -23,11 +23,19 @@ class ListFailedJobs extends XotBaseListRecords
     {
         return [
             Action::make('retry_all')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 
 =======
 
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                
+=======
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                 ->requiresConfirmation()
                 ->action(
                     static function (): void {
@@ -40,11 +48,19 @@ class ListFailedJobs extends XotBaseListRecords
                 ),
 
             Action::make('delete_all')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 
 =======
 
 >>>>>>> origin/v0.2.10
+=======
+<<<<<<< Updated upstream
+                
+=======
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                 ->requiresConfirmation()
                 ->color('danger')
                 ->action(
