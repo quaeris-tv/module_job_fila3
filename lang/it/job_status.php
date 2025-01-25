@@ -1,5 +1,4 @@
-<?php 
-return array (
+<?php return array (
   'resources' => 'Risorse',
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
@@ -12,7 +11,7 @@ return array (
       'name' => 'Jobs',
     ),
     'label' => 'job status',
-    'sort' => 80,
+    'sort' => 21,
   ),
   'fields' => 
   array (
@@ -47,8 +46,5 @@ return array (
       ),
     ),
   ),
-<<<<<<< Updated upstream
-=======
   'title' => 'job status',
->>>>>>> Stashed changes
-);
+);
