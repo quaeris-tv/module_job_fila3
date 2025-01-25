@@ -80,23 +80,7 @@ class FailedJobResource extends XotBaseResource
                 [
                     DeleteBulkAction::make(),
                     BulkAction::make('retry')
-<<<<<<< HEAD:Filament/Resources/FailedJobResource.php
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-                        
-=======
 
->>>>>>> origin/v0.2.10
-=======
-<<<<<<< Updated upstream
-                        
-=======
-
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-=======
-
->>>>>>> origin/dev:app/Filament/Resources/FailedJobResource.php
                         ->requiresConfirmation()
                         ->action(
                             static function (Collection $collection): void {
@@ -118,23 +102,7 @@ class FailedJobResource extends XotBaseResource
                     DeleteAction::make('Delete'),
                     ViewAction::make('View'),
                     Action::make('retry')
-<<<<<<< HEAD:Filament/Resources/FailedJobResource.php
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-                        
-=======
 
->>>>>>> origin/v0.2.10
-=======
-<<<<<<< Updated upstream
-                        
-=======
-
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-=======
-
->>>>>>> origin/dev:app/Filament/Resources/FailedJobResource.php
                         ->requiresConfirmation()
                         ->action(
                             static function (FailedJob $failedJob): void {
