@@ -54,22 +54,6 @@ class ListFailedJobs extends XotBaseListRecords
     {
         return [
             Action::make('retry_all')
-<<<<<<< HEAD:Filament/Resources/FailedJobResource/Pages/ListFailedJobs.php
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-                
-=======
-
->>>>>>> origin/v0.2.10
-=======
-<<<<<<< Updated upstream
-                
-=======
-
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-=======
->>>>>>> origin/dev:app/Filament/Resources/FailedJobResource/Pages/ListFailedJobs.php
                 ->requiresConfirmation()
                 ->action(
                     static function (): void {
@@ -82,22 +66,6 @@ class ListFailedJobs extends XotBaseListRecords
                 ),
 
             Action::make('delete_all')
-<<<<<<< HEAD:Filament/Resources/FailedJobResource/Pages/ListFailedJobs.php
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-                
-=======
-
->>>>>>> origin/v0.2.10
-=======
-<<<<<<< Updated upstream
-                
-=======
-
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-=======
->>>>>>> origin/dev:app/Filament/Resources/FailedJobResource/Pages/ListFailedJobs.php
                 ->requiresConfirmation()
                 ->color('danger')
                 ->action(
