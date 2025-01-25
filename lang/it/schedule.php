@@ -1,5 +1,4 @@
-<?php 
-return array (
+<?php return array (
   'pages' => 'Pagine',
   'widgets' => 'schedule',
   'navigation' => 
@@ -12,7 +11,7 @@ return array (
       'description' => 'Gestione dei job schedulati',
     ),
     'label' => 'schedulatore',
-    'sort' => 30,
+    'sort' => 52,
   ),
   'resource' => 
   array (
@@ -208,4 +207,4 @@ return array (
       ),
     ),
   ),
-);
+);

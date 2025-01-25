@@ -1,5 +1,4 @@
-<?php 
-return array (
+<?php return array (
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
   'navigation' => 
@@ -11,7 +10,7 @@ return array (
       'name' => 'Jobs',
     ),
     'label' => 'job monitor',
-    'sort' => 40,
+    'sort' => 63,
   ),
   'fields' => 
   array (
@@ -21,4 +20,4 @@ return array (
     'updated_at' => 'Aggiornato il',
     'first_name' => 'Nome',
   ),
-);
+);

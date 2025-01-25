@@ -1,5 +1,4 @@
-<?php 
-return array (
+<?php return array (
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
   'navigation' => 
@@ -12,7 +11,7 @@ return array (
       'description' => 'Gestione dei jobs in attesa di esecuzione',
     ),
     'label' => 'jobs in attesa',
-    'sort' => 58,
+    'sort' => 8,
   ),
   'fields' => 
   array (
@@ -125,4 +124,4 @@ return array (
     'recurring' => 'Ricorrente',
     'batch' => 'Batch',
   ),
-);
+);
