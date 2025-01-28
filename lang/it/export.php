@@ -11,7 +11,11 @@
       'description' => 'Gestione delle esportazioni dati',
     ),
     'label' => 'export',
+<<<<<<< HEAD
     'sort' => 4,
+=======
+    'sort' => 54,
+>>>>>>> origin/dev
   ),
   'fields' => 
   array (

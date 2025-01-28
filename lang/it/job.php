@@ -11,7 +11,11 @@
       'description' => 'Gestione dei processi in background',
     ),
     'label' => 'jobs',
+<<<<<<< HEAD
     'sort' => 17,
+=======
+    'sort' => 30,
+>>>>>>> origin/dev
   ),
   'fields' => 
   array (

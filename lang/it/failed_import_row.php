@@ -11,7 +11,11 @@
       'description' => 'Gestione delle righe di importazione fallite',
     ),
     'label' => 'righe import fallite',
+<<<<<<< HEAD
     'sort' => 82,
+=======
+    'sort' => 87,
+>>>>>>> origin/dev
   ),
   'fields' => 
   array (

@@ -11,7 +11,11 @@
       'name' => 'Jobs',
     ),
     'label' => 'job status',
+<<<<<<< HEAD
     'sort' => 83,
+=======
+    'sort' => 21,
+>>>>>>> origin/dev
   ),
   'fields' => 
   array (
@@ -46,4 +50,8 @@
       ),
     ),
   ),
+<<<<<<< HEAD
+=======
+  'title' => 'job status',
+>>>>>>> origin/dev
 );

@@ -11,7 +11,11 @@
       'description' => 'Gestione dei jobs falliti',
     ),
     'label' => 'jobs falliti',
+<<<<<<< HEAD
     'sort' => 76,
+=======
+    'sort' => 23,
+>>>>>>> origin/dev
   ),
   'model' => 
   array (

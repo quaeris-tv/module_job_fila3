@@ -11,7 +11,11 @@
       'description' => 'Gestione dei job schedulati',
     ),
     'label' => 'schedulatore',
+<<<<<<< HEAD
     'sort' => 17,
+=======
+    'sort' => 52,
+>>>>>>> origin/dev
   ),
   'resource' => 
   array (
