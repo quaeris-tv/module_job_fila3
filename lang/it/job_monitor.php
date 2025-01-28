@@ -10,7 +10,11 @@
       'name' => 'Jobs',
     ),
     'label' => 'job monitor',
+<<<<<<< HEAD
     'sort' => 82,
+=======
+    'sort' => 63,
+>>>>>>> origin/dev
   ),
   'fields' => 
   array (

@@ -11,7 +11,11 @@
       'description' => 'Gestione delle importazioni dati',
     ),
     'label' => 'import',
+<<<<<<< HEAD
     'sort' => 7,
+=======
+    'sort' => 84,
+>>>>>>> origin/dev
   ),
   'fields' => 
   array (

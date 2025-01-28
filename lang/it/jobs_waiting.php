@@ -11,7 +11,11 @@
       'description' => 'Gestione dei jobs in attesa di esecuzione',
     ),
     'label' => 'jobs in attesa',
+<<<<<<< HEAD
     'sort' => 81,
+=======
+    'sort' => 8,
+>>>>>>> origin/dev
   ),
   'fields' => 
   array (

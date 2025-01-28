@@ -11,7 +11,11 @@
       'description' => 'Gestione avanzata dei processi',
     ),
     'label' => 'job manager',
+<<<<<<< HEAD
     'sort' => 68,
+=======
+    'sort' => 85,
+>>>>>>> origin/dev
   ),
   'fields' => 
   array (
