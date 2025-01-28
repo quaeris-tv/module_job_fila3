@@ -1,24 +1,22 @@
-<?php return array (
+<?php
+
+return array(
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
-  'navigation' => 
-  array (
+  'navigation' =>
+  array(
     'name' => 'Import',
     'plural' => 'Imports',
-    'group' => 
-    array (
+    'group' =>
+    array(
       'name' => 'Import/Export',
       'description' => 'Gestione delle importazioni dati',
     ),
     'label' => 'import',
-<<<<<<< HEAD
     'sort' => 7,
-=======
-    'sort' => 84,
->>>>>>> origin/dev
   ),
-  'fields' => 
-  array (
+  'fields' =>
+  array(
     'id' => 'ID',
     'name' => 'Nome',
     'description' => 'Descrizione',
@@ -40,82 +38,82 @@
     'permissions' => 'Permessi',
     'first_name' => 'Nome',
     'last_name' => 'Cognome',
-    'select_all' => 
-    array (
+    'select_all' =>
+    array(
       'name' => 'Seleziona Tutti',
       'message' => '',
     ),
   ),
-  'actions' => 
-  array (
-    'import' => 
-    array (
+  'actions' =>
+  array(
+    'import' =>
+    array(
       'label' => 'Importa',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Importa Dati',
         'description' => 'Seleziona un file da importare',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Importazione avviata con successo',
       ),
-      'fields' => 
-      array (
+      'fields' =>
+      array(
         'import_file' => 'Seleziona un file XLS o CSV da caricare',
       ),
     ),
-    'retry' => 
-    array (
+    'retry' =>
+    array(
       'label' => 'Riprova',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Riprova Importazione',
         'description' => 'Vuoi riprovare l\'importazione delle righe fallite?',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Importazione riprovata con successo',
       ),
     ),
-    'delete' => 
-    array (
+    'delete' =>
+    array(
       'label' => 'Elimina',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Elimina Import',
         'description' => 'Sei sicuro di voler eliminare questa importazione?',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Import eliminato con successo',
       ),
     ),
-    'download_errors' => 
-    array (
+    'download_errors' =>
+    array(
       'label' => 'Scarica Errori',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Scarica Log Errori',
         'description' => 'Vuoi scaricare il log degli errori di importazione?',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Log errori scaricato con successo',
       ),
     ),
-    'export' => 
-    array (
+    'export' =>
+    array(
       'filename_prefix' => 'Aree al',
-      'columns' => 
-      array (
+      'columns' =>
+      array(
         'name' => 'Nome area',
         'parent_name' => 'Nome area livello superiore',
       ),
     ),
   ),
-  'messages' => 
-  array (
+  'messages' =>
+  array(
     'no_imports' => 'Nessuna importazione presente',
     'import_started' => 'Importazione avviata',
     'import_completed' => 'Importazione completata',
@@ -124,26 +122,26 @@
     'invalid_format' => 'Formato non valido',
     'row_error' => 'Errore alla riga :row: :message',
   ),
-  'statuses' => 
-  array (
+  'statuses' =>
+  array(
     'pending' => 'In Attesa',
     'processing' => 'In Elaborazione',
     'completed' => 'Completato',
     'failed' => 'Fallito',
     'partial' => 'Completato Parzialmente',
   ),
-  'types' => 
-  array (
+  'types' =>
+  array(
     'csv' => 'CSV',
     'excel' => 'Excel',
     'json' => 'JSON',
     'xml' => 'XML',
   ),
-  'formats' => 
-  array (
+  'formats' =>
+  array(
     'standard' => 'Standard',
     'extended' => 'Esteso',
     'minimal' => 'Minimo',
     'custom' => 'Personalizzato',
   ),
-);
+);
