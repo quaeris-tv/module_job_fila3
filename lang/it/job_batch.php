@@ -1,4 +1,5 @@
-<?php return array (
+<?php 
+return array (
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
   'navigation' => 
@@ -11,11 +12,7 @@
       'description' => 'Gestione dei processi in background',
     ),
     'label' => 'job batch',
-<<<<<<< HEAD
     'sort' => 46,
-=======
-    'sort' => 98,
->>>>>>> origin/dev
   ),
   'fields' => 
   array (
@@ -92,4 +89,4 @@
     'batch_finished' => 'Batch completato',
     'batch_processing' => 'Batch in elaborazione',
   ),
-);
+);

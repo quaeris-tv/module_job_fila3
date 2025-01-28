@@ -1,38 +1,36 @@
-<?php return array (
+<?php
+
+return array(
   'pages' => 'Pagine',
   'widgets' => 'schedule',
-  'navigation' => 
-  array (
+  'navigation' =>
+  array(
     'name' => 'Schedulatore',
     'plural' => 'Schedulatori',
-    'group' => 
-    array (
+    'group' =>
+    array(
       'name' => 'Jobs',
       'description' => 'Gestione dei job schedulati',
     ),
     'label' => 'schedulatore',
-<<<<<<< HEAD
     'sort' => 17,
-=======
-    'sort' => 52,
->>>>>>> origin/dev
   ),
-  'resource' => 
-  array (
+  'resource' =>
+  array(
     'single' => 'Schedule',
     'plural' => 'Schedules',
     'navigation' => 'Settings',
     'history' => 'Show run history',
   ),
-  'fields' => 
-  array (
+  'fields' =>
+  array(
     'name' => 'Nome',
     'guard_name' => 'Guard',
     'permissions' => 'Permessi',
     'first_name' => 'Nome',
     'last_name' => 'Cognome',
-    'select_all' => 
-    array (
+    'select_all' =>
+    array(
       'name' => 'Seleziona Tutti',
       'message' => '',
     ),
@@ -70,8 +68,8 @@
     'error' => 'Errore',
     'run_in_maintenance' => 'Esegui in Manutenzione',
   ),
-  'messages' => 
-  array (
+  'messages' =>
+  array(
     'no-records-found' => 'No records found.',
     'save-success' => 'Data saved successfully.',
     'save-error' => 'Error saving data.',
@@ -91,85 +89,85 @@
     'schedule_failed' => 'Schedule fallito',
     'invalid_expression' => 'Espressione cron non valida',
   ),
-  'status' => 
-  array (
+  'status' =>
+  array(
     'active' => 'Active',
     'inactive' => 'Inactive',
     'trashed' => 'Trashed',
     'running' => 'In Esecuzione',
     'failed' => 'Fallito',
   ),
-  'buttons' => 
-  array (
+  'buttons' =>
+  array(
     'inactivate' => 'Inactivate',
     'activate' => 'Activate',
     'history' => 'History',
-    'run' => 
-    array (
+    'run' =>
+    array(
       'label' => 'Esegui Ora',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Esegui Schedule',
         'description' => 'Vuoi eseguire questo schedule ora?',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Schedule eseguito con successo',
       ),
     ),
-    'toggle' => 
-    array (
+    'toggle' =>
+    array(
       'label' => 'Attiva/Disattiva',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Modifica Stato',
         'description' => 'Vuoi modificare lo stato di questo schedule?',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Stato modificato con successo',
       ),
     ),
-    'delete' => 
-    array (
+    'delete' =>
+    array(
       'label' => 'Elimina',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Elimina Schedule',
         'description' => 'Sei sicuro di voler eliminare questo schedule?',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Schedule eliminato con successo',
       ),
     ),
   ),
-  'validation' => 
-  array (
+  'validation' =>
+  array(
     'cron' => 'The field must be filled in the cron expression format.',
     'regex' => 'The :attribute field must only contain letters, numbers, dashes, and underscores. Comma is also allowed.',
   ),
-  'actions' => 
-  array (
-    'import' => 
-    array (
-      'fields' => 
-      array (
+  'actions' =>
+  array(
+    'import' =>
+    array(
+      'fields' =>
+      array(
         'import_file' => 'Seleziona un file XLS o CSV da caricare',
       ),
     ),
-    'export' => 
-    array (
+    'export' =>
+    array(
       'filename_prefix' => 'Aree al',
-      'columns' => 
-      array (
+      'columns' =>
+      array(
         'name' => 'Nome area',
         'parent_name' => 'Nome area livello superiore',
       ),
     ),
   ),
-  'frequencies' => 
-  array (
+  'frequencies' =>
+  array(
     'everyMinute' => 'Ogni Minuto',
     'everyFiveMinutes' => 'Ogni 5 Minuti',
     'everyTenMinutes' => 'Ogni 10 Minuti',
@@ -182,8 +180,8 @@
     'quarterly' => 'Ogni Trimestre',
     'yearly' => 'Ogni Anno',
   ),
-  'days' => 
-  array (
+  'days' =>
+  array(
     'sunday' => 'Domenica',
     'monday' => 'Lunedì',
     'tuesday' => 'Martedì',
@@ -192,18 +190,18 @@
     'friday' => 'Venerdì',
     'saturday' => 'Sabato',
   ),
-  'cron' => 
-  array (
-    'help' => 
-    array (
+  'cron' =>
+  array(
+    'help' =>
+    array(
       'title' => 'Aiuto Espressioni Cron',
       'minute' => 'Minuto (0-59)',
       'hour' => 'Ora (0-23)',
       'day_of_month' => 'Giorno del Mese (1-31)',
       'month' => 'Mese (1-12)',
       'day_of_week' => 'Giorno della Settimana (0-6)',
-      'examples' => 
-      array (
+      'examples' =>
+      array(
         'every_minute' => '* * * * * - Ogni minuto',
         'every_hour' => '0 * * * * - Ogni ora',
         'every_day' => '0 0 * * * - Ogni giorno a mezzanotte',
@@ -211,4 +209,4 @@
       ),
     ),
   ),
-);
+);

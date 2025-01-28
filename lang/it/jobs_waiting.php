@@ -1,24 +1,22 @@
-<?php return array (
+<?php
+
+return array(
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
-  'navigation' => 
-  array (
+  'navigation' =>
+  array(
     'name' => 'Jobs in Attesa',
     'plural' => 'Jobs in Attesa',
-    'group' => 
-    array (
+    'group' =>
+    array(
       'name' => 'Jobs',
       'description' => 'Gestione dei jobs in attesa di esecuzione',
     ),
     'label' => 'jobs in attesa',
-<<<<<<< HEAD
     'sort' => 81,
-=======
-    'sort' => 8,
->>>>>>> origin/dev
   ),
-  'fields' => 
-  array (
+  'fields' =>
+  array(
     'id' => 'ID',
     'queue' => 'Coda',
     'payload' => 'Payload',
@@ -36,96 +34,96 @@
     'tags' => 'Tags',
     'first_name' => 'Nome',
     'last_name' => 'Cognome',
-    'select_all' => 
-    array (
+    'select_all' =>
+    array(
       'name' => 'Seleziona Tutti',
       'message' => '',
     ),
   ),
-  'actions' => 
-  array (
-    'import' => 
-    array (
-      'fields' => 
-      array (
+  'actions' =>
+  array(
+    'import' =>
+    array(
+      'fields' =>
+      array(
         'import_file' => 'Seleziona un file XLS o CSV da caricare',
       ),
     ),
-    'export' => 
-    array (
+    'export' =>
+    array(
       'filename_prefix' => 'Aree al',
-      'columns' => 
-      array (
+      'columns' =>
+      array(
         'name' => 'Nome area',
         'parent_name' => 'Nome area livello superiore',
       ),
     ),
-    'process' => 
-    array (
+    'process' =>
+    array(
       'label' => 'Processa',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Processa Job',
         'description' => 'Vuoi processare questo job in attesa?',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Job processato con successo',
       ),
     ),
-    'cancel' => 
-    array (
+    'cancel' =>
+    array(
       'label' => 'Cancella',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Cancella Job',
         'description' => 'Vuoi cancellare questo job in attesa?',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Job cancellato con successo',
       ),
     ),
-    'retry' => 
-    array (
+    'retry' =>
+    array(
       'label' => 'Riprova',
-      'modal' => 
-      array (
+      'modal' =>
+      array(
         'heading' => 'Riprova Job',
         'description' => 'Vuoi riprovare questo job?',
       ),
-      'messages' => 
-      array (
+      'messages' =>
+      array(
         'success' => 'Job riprovato con successo',
       ),
     ),
   ),
-  'messages' => 
-  array (
+  'messages' =>
+  array(
     'no_jobs' => 'Nessun job in attesa',
     'job_processed' => 'Job processato',
     'job_cancelled' => 'Job cancellato',
     'job_retried' => 'Job riprovato',
   ),
-  'statuses' => 
-  array (
+  'statuses' =>
+  array(
     'waiting' => 'In Attesa',
     'reserved' => 'Riservato',
     'delayed' => 'Ritardato',
     'ready' => 'Pronto',
   ),
-  'priorities' => 
-  array (
+  'priorities' =>
+  array(
     'low' => 'Bassa',
     'normal' => 'Normale',
     'high' => 'Alta',
     'urgent' => 'Urgente',
   ),
-  'types' => 
-  array (
+  'types' =>
+  array(
     'default' => 'Default',
     'scheduled' => 'Schedulato',
     'recurring' => 'Ricorrente',
     'batch' => 'Batch',
   ),
-);
+);
