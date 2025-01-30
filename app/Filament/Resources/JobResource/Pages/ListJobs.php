@@ -8,7 +8,6 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ViewColumn;
 use Modules\Job\Filament\Resources\JobResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Filament\Tables\Columns\Column;
 
 class ListJobs extends XotBaseListRecords
 {
