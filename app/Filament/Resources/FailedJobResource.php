@@ -32,15 +32,6 @@ class FailedJobResource extends XotBaseResource
 {
     protected static ?string $model = FailedJob::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-exclamation-circle';
-
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema(self::getFormSchema())
-            ->columns(4);
-    }
-
     public static function getFormSchema(): array
     {
         return [
