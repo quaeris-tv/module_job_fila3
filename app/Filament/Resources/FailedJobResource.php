@@ -20,16 +20,22 @@ class FailedJobResource extends XotBaseResource
     public static function getFormSchema(): array
     {
         return [
-            Forms\Components\TextInput::make('uuid')->disabled()->columnSpan(4),
-            Forms\Components\TextInput::make('failed_at')->disabled(),
-            Forms\Components\TextInput::make('id')->disabled(),
-            Forms\Components\TextInput::make('connection')->disabled(),
-            Forms\Components\TextInput::make('queue')->disabled(),
-            Forms\Components\Textarea::make('exception')
+            'uuid' => Forms\Components\TextInput::make('uuid')
+                ->disabled()
+                ->columnSpan(4),
+            'failed_at' => Forms\Components\TextInput::make('failed_at')
+                ->disabled(),
+            'id' => Forms\Components\TextInput::make('id')
+                ->disabled(),
+            'connection' => Forms\Components\TextInput::make('connection')
+                ->disabled(),
+            'queue' => Forms\Components\TextInput::make('queue')
+                ->disabled(),
+            'exception' => Forms\Components\Textarea::make('exception')
                 ->disabled()
                 ->columnSpan(4)
                 ->extraInputAttributes(['style' => 'font-size: 80%;']),
-            Forms\Components\Textarea::make('payload')
+            'payload' => Forms\Components\Textarea::make('payload')
                 ->disabled()
                 ->columnSpan(4)
                 ->extraInputAttributes(['style' => 'font-size: 80%;']),
