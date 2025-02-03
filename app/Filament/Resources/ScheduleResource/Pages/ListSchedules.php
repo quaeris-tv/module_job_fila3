@@ -87,7 +87,7 @@ class ListSchedules extends XotBaseListRecords
         ];
     }
 
-    public function getTableActions(): array
+    public function getListTableActions(): array
     {
         return [
             Tables\Actions\EditAction::make()
@@ -106,7 +106,7 @@ class ListSchedules extends XotBaseListRecords
         ];
     }
 
-    public function getTableBulkActions(): array
+    public function getListTableBulkActions(): array
     {
         return [
             Tables\Actions\DeleteBulkAction::make(),
