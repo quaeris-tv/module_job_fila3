@@ -42,11 +42,14 @@ class FailedJobResource extends XotBaseResource
             TextInput::make('queue')->disabled(),
             // make text a little bit smaller because often a complete Stack Trace is shown:
             Textarea::make('exception')->disabled()->columnSpan(4)->extraInputAttributes(['style' => 'font-size: 80%;']),
-            // JSONEditor::make('payload')->disabled()->columnSpan(4),
+            Textarea::make('payload')
+                ->disabled()
+                ->columnSpan(4)
+                ->extraInputAttributes(['style' => 'font-size: 80%;']),
         ];
     }
 
-    public static function tableOld(Table $table): Table
+    public static function table(Table $table): Table
     {
         return $table
             ->defaultSort('id', 'desc')

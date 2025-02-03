@@ -98,21 +98,16 @@ class Job extends BaseModel
     protected function casts(): array
     {
         return [
-            'id' => 'string',
-            'uuid' => 'string',
+            'id' => 'integer',
+            'queue' => 'string',
+            'payload' => 'array',
+            'attempts' => 'integer',
+            'reserved_at' => 'integer',
+            'available_at' => 'integer',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
-            'deleted_at' => 'datetime',
-
-            'updated_by' => 'string',
             'created_by' => 'string',
-            'deleted_by' => 'string',
-
-            'payload' => 'array',
-
-            // 'updated_at' => 'datetime:Y-m-d H:00',
-            // 'created_at' => 'datetime:Y-m-d',
-            // 'created_at' => 'datetime:d/m/Y H:i'
+            'updated_by' => 'string',
         ];
     }
 }
