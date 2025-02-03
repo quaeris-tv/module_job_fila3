@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources;
 
-use Filament\Forms\Form;
 use Modules\Job\Filament\Resources\JobResource\Pages;
 use Modules\Job\Filament\Resources\JobResource\Widgets;
 use Modules\Job\Models\Job;
@@ -18,13 +17,22 @@ class JobResource extends XotBaseResource
 
     protected static ?string $recordTitleAttribute = 'name';
 
-    public static function form(Form $form): Form
+    public static function getFormSchema(): array
     {
-        return $form
-            ->schema(
-                [
-                ]
-            );
+        return [
+            \Filament\Forms\Components\TextInput::make('queue')
+                ->required()
+                ->maxLength(255),
+            \Filament\Forms\Components\TextInput::make('payload')
+                ->required(),
+            \Filament\Forms\Components\TextInput::make('attempts')
+                ->numeric()
+                ->required(),
+            \Filament\Forms\Components\DateTimePicker::make('available_at')
+                ->required(),
+            \Filament\Forms\Components\DateTimePicker::make('created_at')
+                ->required(),
+        ];
     }
 
     public static function getRelations(): array
