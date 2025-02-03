@@ -15,7 +15,47 @@ class JobResource extends XotBaseResource
 
     protected static ?string $navigationIcon = 'heroicon-o-circle-stack';
 
-    protected static ?string $recordTitleAttribute = 'name';
+    protected static ?string $recordTitleAttribute = 'display_name';
+
+    public static function table(\Filament\Tables\Table $table): \Filament\Tables\Table
+    {
+        return $table
+            ->columns([
+                \Filament\Tables\Columns\TextColumn::make('id')
+                    ->sortable()
+                    ->searchable()
+                    ->label('ID'),
+                \Filament\Tables\Columns\TextColumn::make('queue')
+                    ->sortable()
+                    ->searchable()
+                    ->label('Queue'),
+                \Filament\Tables\Columns\TextColumn::make('display_name')
+                    ->sortable()
+                    ->searchable()
+                    ->label('Job Name'),
+                \Filament\Tables\Columns\TextColumn::make('attempts')
+                    ->sortable()
+                    ->label('Attempts'),
+                \Filament\Tables\Columns\TextColumn::make('status')
+                    ->sortable()
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'running' => 'warning',
+                        'waiting' => 'info',
+                        default => 'secondary',
+                    })
+                    ->label('Status'),
+                \Filament\Tables\Columns\TextColumn::make('available_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->label('Available At'),
+                \Filament\Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->label('Created At'),
+            ])
+            ->defaultSort('created_at', 'desc');
+    }
 
     public static function getFormSchema(): array
     {
