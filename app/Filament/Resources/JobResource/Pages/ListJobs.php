@@ -48,7 +48,7 @@ class ListJobs extends XotBaseListRecords
             'created_at' => TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable(),
-            ViewColumn::make('payload')
+            'payload_view' => ViewColumn::make('payload')
                 ->view('job::filament.tables.columns.array'),
         ];
     }
