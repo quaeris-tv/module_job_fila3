@@ -52,4 +52,33 @@ class ListJobs extends XotBaseListRecords
                 ->view('job::filament.tables.columns.array'),
         ];
     }
+
+    public function getTableFilters(): array
+    {
+        return [
+            \Filament\Tables\Filters\SelectFilter::make('status')
+                ->options([
+                    'running' => 'Running',
+                    'waiting' => 'Waiting',
+                    'failed' => 'Failed',
+                ]),
+            \Filament\Tables\Filters\SelectFilter::make('queue')
+                ->options(fn () => \Modules\Job\Models\Job::distinct()->pluck('queue', 'queue')->toArray()),
+        ];
+    }
+
+    public function getTableActions(): array
+    {
+        return [
+            \Filament\Tables\Actions\ViewAction::make(),
+            \Filament\Tables\Actions\DeleteAction::make(),
+        ];
+    }
+
+    public function getTableBulkActions(): array
+    {
+        return [
+            \Filament\Tables\Actions\DeleteBulkAction::make(),
+        ];
+    }
 }
