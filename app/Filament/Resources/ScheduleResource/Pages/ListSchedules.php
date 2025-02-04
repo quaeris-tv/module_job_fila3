@@ -48,20 +48,21 @@ class ListSchedules extends XotBaseListRecords
                 ->searchable()
                 ->sortable(),
             Tables\Columns\BadgeColumn::make('status')
-                ->enum([
+                ->getStateUsing(fn ($state) => match ($state) {
                     Schedule::STATUS_ACTIVE => static::trans('status.active'),
                     Schedule::STATUS_INACTIVE => static::trans('status.inactive'),
                     Schedule::STATUS_TRASHED => static::trans('status.trashed'),
-                ])
+                    default => $state,
+                })
                 ->colors([
-                    'success' => Schedule::STATUS_ACTIVE,
-                    'warning' => Schedule::STATUS_INACTIVE,
-                    'danger' => Schedule::STATUS_TRASHED,
+                    Schedule::STATUS_ACTIVE => 'success',
+                    Schedule::STATUS_INACTIVE => 'warning',
+                    Schedule::STATUS_TRASHED => 'danger',
                 ])
                 ->icons([
-                    'heroicon-o-check-circle' => Schedule::STATUS_ACTIVE,
-                    'heroicon-o-document' => Schedule::STATUS_INACTIVE,
-                    'heroicon-o-x-circle' => Schedule::STATUS_TRASHED,
+                    Schedule::STATUS_ACTIVE => 'heroicon-o-check-circle',
+                    Schedule::STATUS_INACTIVE => 'heroicon-o-document',
+                    Schedule::STATUS_TRASHED => 'heroicon-o-x-circle',
                 ])
                 ->searchable()
                 ->sortable(),
