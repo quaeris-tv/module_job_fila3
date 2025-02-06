@@ -181,4 +181,7 @@ return [
             ],
         ],
     ],
+    'model' => [
+        'label' => 'schedule.model',
+    ],
 ];
