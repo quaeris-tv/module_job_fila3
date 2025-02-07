@@ -20,71 +20,39 @@ class ListSchedules extends XotBaseListRecords
     public function getListTableColumns(): array
     {
         return [
-            Tables\Columns\TextColumn::make('id')
-                ->searchable()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('command')
-                ->getStateUsing(function ($record) {
-                    if ($record->command === 'custom') {
-                        return $record->command_custom;
-                    }
-
-                    return $record->command;
-                })
-                ->searchable()
+            'id' => Tables\Columns\TextColumn::make('id')
+                ->numeric()
                 ->sortable()
-                ->wrap(),
-            ScheduleArguments::make('params')
-                ->searchable()
+                ->searchable(),
+            'command' => Tables\Columns\TextColumn::make('command')
+                ->sortable()
+                ->searchable(),
+            'params' => Tables\Columns\TextColumn::make('params')
+                ->wrap()
+                ->searchable(),
+            'expression' => Tables\Columns\TextColumn::make('expression')
+                ->sortable()
+                ->searchable(),
+            'timezone' => Tables\Columns\TextColumn::make('timezone')
+                ->sortable()
+                ->searchable(),
+            'is_active' => Tables\Columns\IconColumn::make('is_active')
+                ->boolean()
                 ->sortable(),
-            Tables\Columns\TextColumn::make('expression')
-                ->searchable()
+            'without_overlapping' => Tables\Columns\IconColumn::make('without_overlapping')
+                ->boolean()
                 ->sortable(),
-            Tables\Columns\TagsColumn::make('environments')
-                ->separator(',')
-                ->searchable()
+            'on_one_server' => Tables\Columns\IconColumn::make('on_one_server')
+                ->boolean()
                 ->sortable(),
-            ScheduleOptions::make('options')
-                ->searchable()
-                ->sortable(),
-            Tables\Columns\BadgeColumn::make('status')
-                ->getStateUsing(fn ($state) => match ($state) {
-                    Schedule::STATUS_ACTIVE => static::trans('status.active'),
-                    Schedule::STATUS_INACTIVE => static::trans('status.inactive'),
-                    Schedule::STATUS_TRASHED => static::trans('status.trashed'),
-                    default => $state,
-                })
-                ->colors([
-                    Schedule::STATUS_ACTIVE => 'success',
-                    Schedule::STATUS_INACTIVE => 'warning',
-                    Schedule::STATUS_TRASHED => 'danger',
-                ])
-                ->icons([
-                    Schedule::STATUS_ACTIVE => 'heroicon-o-check-circle',
-                    Schedule::STATUS_INACTIVE => 'heroicon-o-document',
-                    Schedule::STATUS_TRASHED => 'heroicon-o-x-circle',
-                ])
-                ->searchable()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('created_at')
+            'created_at' => Tables\Columns\TextColumn::make('created_at')
                 ->dateTime()
-                ->searchable()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('updated_at')
-                ->getStateUsing(fn ($record) => $record->created_at == $record->updated_at ? static::trans('fields.never') : $record->updated_at)
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            'updated_at' => Tables\Columns\TextColumn::make('updated_at')
                 ->dateTime()
-                ->formatStateUsing(static function (Column $column, $state): ?string {
-                    $format ??= config('tables.date_time_format');
-                    if (blank($state) || $state == static::trans('fields.never')) {
-                        return $state;
-                    }
-
-                    return Carbon::parse($state)
-                        ->setTimezone($timezone ?? $column->getTimezone())
-                        ->translatedFormat($format);
-                })
-                ->searchable()
-                ->sortable(),
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
         ];
     }
 

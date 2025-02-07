@@ -4,9 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\JobResource\Pages;
 
+use Filament\Tables;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ViewColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Modules\Job\Filament\Resources\JobResource;
+use Modules\Job\Models\Job;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListJobs extends XotBaseListRecords
@@ -14,7 +19,7 @@ class ListJobs extends XotBaseListRecords
     protected static string $resource = JobResource::class;
 
     /**
-     * @return array<string, \Filament\Tables\Columns\Column>
+     * @return array<string, Tables\Columns\Column>
      */
     public function getListTableColumns(): array
     {
@@ -52,32 +57,31 @@ class ListJobs extends XotBaseListRecords
         ];
     }
 
+    /**
+     * @return array<string, Tables\Filters\BaseFilter>
+     */
     public function getTableFilters(): array
     {
         return [
-            \Filament\Tables\Filters\SelectFilter::make('status')
+            'status' => SelectFilter::make('status')
                 ->options([
                     'running' => 'Running',
                     'waiting' => 'Waiting',
                     'failed' => 'Failed',
                 ]),
-            \Filament\Tables\Filters\SelectFilter::make('queue')
-                ->options(fn () => \Modules\Job\Models\Job::distinct()->pluck('queue', 'queue')->toArray()),
+            'queue' => SelectFilter::make('queue')
+                ->options(fn () => Job::distinct()->pluck('queue', 'queue')->toArray()),
         ];
     }
 
+    /**
+     * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
+     */
     public function getTableActions(): array
     {
         return [
-            \Filament\Tables\Actions\ViewAction::make(),
-            \Filament\Tables\Actions\DeleteAction::make(),
-        ];
-    }
-
-    public function getTableBulkActions(): array
-    {
-        return [
-            \Filament\Tables\Actions\DeleteBulkAction::make(),
+            'view' => ViewAction::make(),
+            'delete' => DeleteAction::make(),
         ];
     }
 }
