@@ -8,7 +8,7 @@ use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Modules\Job\Filament\Resources\ExportResource;
 
-class EditExport extends EditRecord
+class EditExport extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     protected static string $resource = ExportResource::class;
 
