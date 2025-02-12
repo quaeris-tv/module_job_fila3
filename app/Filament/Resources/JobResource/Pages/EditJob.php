@@ -8,7 +8,7 @@ use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 use Modules\Job\Filament\Resources\JobResource;
 
-class EditJob extends EditRecord
+class EditJob extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     protected static string $resource = JobResource::class;
 
