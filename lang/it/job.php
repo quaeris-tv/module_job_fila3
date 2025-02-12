@@ -12,6 +12,7 @@ return [
         ],
         'label' => 'jobs',
         'sort' => 17,
+        'icon' => 'heroicon-o-computer-desktop',
     ],
     'fields' => [
         'id' => 'ID',
