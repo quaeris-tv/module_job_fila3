@@ -1,14 +1,15 @@
-<?php return array (
-  'navigation' => array (
+<?php return array (
+  'navigation' => 
+  array (
     'name' => 'Jobs Falliti',
     'plural' => 'Jobs Falliti',
-    'group' => array (
+    'group' => 
+    array (
       'name' => 'Sistema',
       'description' => 'Gestione e recupero dei jobs falliti',
     ),
     'label' => 'Jobs Falliti',
-    'sort' => 22,
-    'icon' => 'failed-job',  // Nome corretto
+    'sort' => 93,
+    'icon' => 'job-failed-job',
   ),
-  // ... resto del contenuto invariato ...
-);
+);

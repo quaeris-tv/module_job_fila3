@@ -9,7 +9,7 @@
       'description' => 'Gestione delle importazioni di dati',
     ),
     'label' => 'Importazione Dati',
-    'sort' => 51,
+    'sort' => 10,
     'icon' => 'job-import',
   ),
   'fields' => 

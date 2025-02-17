@@ -1,14 +1,15 @@
-<?php return array (
-  'navigation' => array (
+<?php return array (
+  'navigation' => 
+  array (
     'name' => 'Batch Jobs',
     'plural' => 'Batch Jobs',
-    'group' => array (
+    'group' => 
+    array (
       'name' => 'Sistema',
       'description' => 'Gestione dei job batch e delle code di elaborazione',
     ),
     'label' => 'Job Batch',
-    'sort' => 21,
-    'icon' => 'batch',  // Corretto da 'job-batch'
+    'sort' => 10,
+    'icon' => 'batch',
   ),
-  // ... resto del contenuto invariato ...
-);
+);

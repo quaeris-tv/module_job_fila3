@@ -1,14 +1,15 @@
-<?php return array (
-  'navigation' => array (
+<?php return array (
+  'navigation' => 
+  array (
     'name' => 'Monitor Jobs',
     'plural' => 'Monitor Jobs',
-    'group' => array (
+    'group' => 
+    array (
       'name' => 'Sistema',
       'description' => 'Gestione e monitoraggio dei jobs di sistema',
     ),
     'label' => 'Monitor Jobs',
-    'sort' => 20,
-    'icon' => 'monitor',  // Corretto da 'job-monitor'
+    'sort' => 72,
+    'icon' => 'monitor',
   ),
-  // ... resto del contenuto invariato ...
-);
+);

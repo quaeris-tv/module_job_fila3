@@ -9,7 +9,7 @@
       'description' => 'Gestione delle esportazioni di dati',
     ),
     'label' => 'Esportazione Dati',
-    'sort' => 22,
+    'sort' => 97,
     'icon' => 'job-export',
   ),
   'fields' => 
