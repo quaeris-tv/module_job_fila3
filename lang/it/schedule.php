@@ -1,14 +1,15 @@
-<?php return array (
-  'navigation' => array (
+<?php return array (
+  'navigation' => 
+  array (
     'name' => 'Scheduler',
     'plural' => 'Scheduler',
-    'group' => array (
+    'group' => 
+    array (
       'name' => 'Sistema',
       'description' => 'Gestione dei jobs programmati',
     ),
     'label' => 'Job Scheduler',
-    'sort' => 23,
-    'icon' => 'schedule',  // Corretto da 'job-schedule'
+    'sort' => 82,
+    'icon' => 'schedule',
   ),
-  // ... resto del contenuto invariato ...
-);
+);

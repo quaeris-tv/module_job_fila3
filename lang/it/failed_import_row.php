@@ -11,7 +11,7 @@
       'description' => 'Gestione delle righe di importazione fallite',
     ),
     'label' => 'righe import fallite',
-    'sort' => 75,
+    'sort' => 97,
   ),
   'fields' => 
   array (
