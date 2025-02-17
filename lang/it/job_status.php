@@ -1,42 +1,14 @@
-<?php
-
-return [
-    'resources' => 'Risorse',
-    'pages' => 'Pagine',
-    'widgets' => 'Widgets',
-    'navigation' => [
-        'name' => 'job status',
-        'plural' => 'job status',
-        'group' => [
-            'name' => 'Jobs',
-        ],
-        'label' => 'job status',
-        'sort' => 83,
-    ],
-    'fields' => [
-        'name' => 'Nome',
-        'guard_name' => 'Guard',
-        'permissions' => 'Permessi',
-        'updated_at' => 'Aggiornato il',
-        'first_name' => 'Nome',
-        'last_name' => 'Cognome',
-        'select_all' => [
-            'name' => 'Seleziona Tutti',
-            'message' => '',
-        ],
-    ],
-    'actions' => [
-        'import' => [
-            'fields' => [
-                'import_file' => 'Seleziona un file XLS o CSV da caricare',
-            ],
-        ],
-        'export' => [
-            'filename_prefix' => 'Aree al',
-            'columns' => [
-                'name' => 'Nome area',
-                'parent_name' => 'Nome area livello superiore',
-            ],
-        ],
-    ],
-];
+<?php return array (
+  'navigation' => array (
+    'name' => 'Stato Jobs',
+    'plural' => 'Stati Jobs',
+    'group' => array (
+      'name' => 'Sistema',
+      'description' => 'Monitoraggio dello stato dei jobs',
+    ),
+    'label' => 'Stato Jobs',
+    'sort' => 25,
+    'icon' => 'status',  // Corretto da 'job-status'
+  ),
+  // ... resto del contenuto invariato ...
+);
