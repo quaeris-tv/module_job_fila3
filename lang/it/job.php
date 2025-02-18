@@ -12,7 +12,7 @@
     ),
     'label' => 'jobs',
     'sort' => 36,
-    'icon' => 'job.navigation',
+    'icon' => 'job-main-animated',
   ),
   'fields' => 
   array (

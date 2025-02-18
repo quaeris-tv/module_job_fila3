@@ -10,6 +10,6 @@
     ),
     'label' => 'Job Manager',
     'sort' => 1,
-    'icon' => 'manager',
+    'icon' => 'job-manager-animated',
   ),
 );

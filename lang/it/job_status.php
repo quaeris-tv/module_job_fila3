@@ -10,6 +10,6 @@
     ),
     'label' => 'Stato Jobs',
     'sort' => 73,
-    'icon' => 'status',
+    'icon' => 'job-status-animated',
   ),
 );

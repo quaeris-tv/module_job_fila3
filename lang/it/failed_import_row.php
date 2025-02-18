@@ -12,7 +12,7 @@
     ),
     'label' => 'righe import fallite',
     'sort' => 97,
-    'icon' => 'failed import row.navigation',
+    'icon' => 'job-failed-import-animated',
   ),
   'fields' => 
   array (
