@@ -34,12 +34,7 @@ class EditSchedule extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditReco
             ->schema($this->getFormSchema());
     }
 
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\DeleteAction::make(),
-        ];
-    }
+   
 
     protected function onValidationError(ValidationException $exception): void
     {

@@ -11,10 +11,5 @@ class EditFailedImportRow extends \Modules\Xot\Filament\Resources\Pages\XotBaseE
 {
     protected static string $resource = FailedImportRowResource::class;
 
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\DeleteAction::make(),
-        ];
-    }
+   
 }

@@ -15,10 +15,5 @@ class EditJobManager extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRe
 {
     protected static string $resource = JobManagerResource::class;
 
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\DeleteAction::make(),
-        ];
-    }
+   
 }
