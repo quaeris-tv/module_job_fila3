@@ -10,6 +10,6 @@
     ),
     'label' => 'Job Scheduler',
     'sort' => 82,
-    'icon' => 'schedule',
+    'icon' => 'job-schedule-animated',
   ),
 );

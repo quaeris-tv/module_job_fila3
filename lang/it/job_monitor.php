@@ -10,6 +10,6 @@
     ),
     'label' => 'Monitor Jobs',
     'sort' => 72,
-    'icon' => 'monitor',
+    'icon' => 'job-monitor-animated',
   ),
 );

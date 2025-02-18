@@ -10,6 +10,6 @@
     ),
     'label' => 'Jobs in Attesa',
     'sort' => 15,
-    'icon' => 'waiting',
+    'icon' => 'job-waiting-animated',
   ),
 );

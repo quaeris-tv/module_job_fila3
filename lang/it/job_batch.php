@@ -10,6 +10,6 @@
     ),
     'label' => 'Job Batch',
     'sort' => 10,
-    'icon' => 'batch',
+    'icon' => 'job-batch-animated',
   ),
 );
