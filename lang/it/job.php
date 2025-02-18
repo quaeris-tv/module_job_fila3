@@ -12,6 +12,7 @@
     ),
     'label' => 'jobs',
     'sort' => 36,
+    'icon' => 'job.navigation',
   ),
   'fields' => 
   array (
