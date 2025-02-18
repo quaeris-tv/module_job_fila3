@@ -8,7 +8,7 @@ use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Modules\Job\Filament\Resources\FailedImportRowResource;
 
-class EditFailedImportRow extends EditRecord
+class EditFailedImportRow extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     protected static string $resource = FailedImportRowResource::class;
 

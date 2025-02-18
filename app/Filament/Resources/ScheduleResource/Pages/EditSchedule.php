@@ -14,7 +14,7 @@ use Modules\Job\Filament\Resources\ScheduleResource;
 use Modules\Xot\Filament\Traits\NavigationPageLabelTrait;
 use Webmozart\Assert\Assert;
 
-class EditSchedule extends EditRecord
+class EditSchedule extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     use NavigationPageLabelTrait;
 
