@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\ExportResource\Pages;
 
-use Filament\Tables;
-use Filament\Tables\Actions\DeleteBulkAction;
-use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Job\Filament\Resources\ExportResource;
@@ -42,6 +39,4 @@ class ListExports extends XotBaseListRecords
                 ->toggleable(isToggledHiddenByDefault: true),
         ];
     }
-
-   
 }

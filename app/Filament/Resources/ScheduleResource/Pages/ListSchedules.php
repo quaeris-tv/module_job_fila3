@@ -5,12 +5,7 @@ declare(strict_types=1);
 namespace Modules\Job\Filament\Resources\ScheduleResource\Pages;
 
 use Filament\Tables;
-use Filament\Tables\Columns\Column;
-use Illuminate\Support\Carbon;
-use Modules\Job\Filament\Columns\ScheduleArguments;
-use Modules\Job\Filament\Columns\ScheduleOptions;
 use Modules\Job\Filament\Resources\ScheduleResource;
-use Modules\Job\Models\Schedule;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListSchedules extends XotBaseListRecords

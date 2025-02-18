@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Job\Actions\Command;
 
 use Illuminate\Console\Application;
-use Illuminate\Support\Collection;
 use Modules\Job\Datas\CommandData;
 use Spatie\LaravelData\DataCollection;
 
@@ -13,8 +12,7 @@ class GetCommandsAction
 {
     public function __construct(
         private readonly Application $application
-    ) {
-    }
+    ) {}
 
     /**
      * Execute the action.
@@ -46,12 +44,12 @@ class GetCommandsAction
 
             return CommandData::from([
                 'name' => $name,
-                'full_name' => $name . ' - ' . $description,
+                'full_name' => $name.' - '.$description,
                 'description' => $description,
                 'arguments' => $arguments->toArray(),
                 'options' => [
                     'withValue' => $options->toArray(),
-                ]
+                ],
             ]);
         });
 
