@@ -12,7 +12,7 @@ use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Modules\Job\Filament\Resources\JobManagerResource;
 
-class EditJobManager extends EditRecord
+class EditJobManager extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     protected static string $resource = JobManagerResource::class;
 
