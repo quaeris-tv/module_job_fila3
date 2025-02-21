@@ -41,18 +41,7 @@ class JobsWaitingResource extends XotBaseResource
         ];
     }
 
-    public static function getRelations(): array
-    {
-        return [
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => ListJobsWaiting::route('/'),
-        ];
-    }
+   
 
     public static function getWidgets(): array
     {
@@ -61,43 +50,5 @@ class JobsWaitingResource extends XotBaseResource
         ];
     }
 
-    /*
-    public static function getNavigationBadge(): ?string {
-        return JobsWaitingPlugin::make()->getNavigationCountBadge() ? number_format(static::getModel()::count()) : null;
-    }
-
-    public static function getModelLabel(): string {
-        return JobsWaitingPlugin::make()->getLabel();
-    }
-
-    public static function getPluralModelLabel(): string {
-        return JobsWaitingPlugin::make()->getPluralLabel();
-    }
-
-    public static function getNavigationGroup(): ?string {
-        return JobsWaitingPlugin::make()->getNavigationGroup();
-    }
-
-    public static function getNavigationSort(): ?int {
-        return JobsWaitingPlugin::make()->getNavigationSort();
-    }
-
-    public static function getBreadcrumb(): string {
-        return JobsWaitingPlugin::make()->getBreadcrumb();
-    }
-
-    public static function shouldRegisterNavigation(): bool {
-        return JobsWaitingPlugin::make()->shouldRegisterNavigation();
-    }
-
-    public static function getNavigationIcon(): string {
-        return JobsWaitingPlugin::make()->getNavigationIcon();
-    }
-    */
-
-    /*
-    public static function getNavigationLabel(): string {
-        return Str::title(static::getPluralModelLabel());
-    }
-    */
+   
 }
