@@ -13,15 +13,38 @@ return [
         'icon' => 'job-export',
     ],
     'fields' => [
-        'name' => 'Nome',
-        'format' => 'Formato',
-        'filters' => 'Filtri',
-        'columns' => 'Colonne',
-        'total_records' => 'Totale Record',
-        'status' => 'Stato',
-        'created_at' => 'Creato il',
-        'completed_at' => 'Completato il',
-        'download_url' => 'URL Download',
+        'name' => [
+            'label' => 'Nome',
+            'tooltip' => 'Nome dell\'esportazione',
+            'placeholder' => 'Inserisci il nome dell\'esportazione',
+        ],
+        'format' => [
+            'label' => 'Formato',
+            'tooltip' => 'Formato del file esportato',
+        ],
+        'filters' => [
+            'label' => 'Filtri',
+            'tooltip' => 'Filtri applicati ai dati',
+        ],
+        'columns' => [
+            'label' => 'Colonne',
+            'tooltip' => 'Colonne incluse nell\'esportazione',
+        ],
+        'total_records' => [
+            'label' => 'Totale Record',
+        ],
+        'status' => [
+            'label' => 'Stato',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
+        'completed_at' => [
+            'label' => 'Completato il',
+        ],
+        'download_url' => [
+            'label' => 'URL Download',
+        ],
     ],
     'formats' => [
         'csv' => 'CSV',
@@ -31,17 +54,43 @@ return [
         'pdf' => 'PDF',
     ],
     'options' => [
-        'include_headers' => 'Includi intestazioni',
-        'delimiter' => 'Delimitatore',
-        'encoding' => 'Codifica',
-        'worksheet_name' => 'Nome foglio di lavoro',
-        'chunk_size' => 'Dimensione chunk',
+        'include_headers' => [
+            'label' => 'Includi intestazioni',
+        ],
+        'delimiter' => [
+            'label' => 'Delimitatore',
+        ],
+        'encoding' => [
+            'label' => 'Codifica',
+        ],
+        'worksheet_name' => [
+            'label' => 'Nome foglio di lavoro',
+        ],
+        'chunk_size' => [
+            'label' => 'Dimensione chunk',
+        ],
     ],
     'actions' => [
-        'create' => 'Nuova Esportazione',
-        'download' => 'Scarica',
-        'cancel' => 'Annulla',
-        'delete' => 'Elimina',
+        'create' => [
+            'label' => 'Nuova Esportazione',
+            'icon' => 'plus',
+            'color' => 'success',
+        ],
+        'download' => [
+            'label' => 'Scarica',
+            'icon' => 'download',
+            'color' => 'primary',
+        ],
+        'cancel' => [
+            'label' => 'Annulla',
+            'icon' => 'times',
+            'color' => 'warning',
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+            'icon' => 'trash',
+            'color' => 'danger',
+        ],
     ],
     'messages' => [
         'export_queued' => 'Esportazione in coda',

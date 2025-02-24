@@ -15,30 +15,18 @@ return [
         'icon' => 'job-failed-import-animated',
     ],
     'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'import_id' => [
-            'label' => 'ID Importazione',
-        ],
-        'row_number' => 'Numero Riga',
-        'data' => [
-            'label' => 'Dati',
-        ],
-        'errors' => 'Errori',
-        'created_at' => [
-            'label' => 'Creato il',
-        ],
-        'updated_at' => [
-            'label' => 'Aggiornato il',
-        ],
-        'resolved_at' => 'Risolto il',
-        'resolved_by' => 'Risolto da',
-        'resolution_notes' => 'Note Risoluzione',
-        'status' => 'Stato',
-        'validation_error' => [
-            'label' => 'validation_error',
-        ],
+        'id' => ['label' => 'ID'],
+        'import_id' => ['label' => 'ID Importazione'],
+        'row_number' => ['label' => 'Numero Riga'],
+        'data' => ['label' => 'Dati'],
+        'errors' => ['label' => 'Errori'],
+        'created_at' => ['label' => 'Creato il'],
+        'updated_at' => ['label' => 'Aggiornato il'],
+        'resolved_at' => ['label' => 'Risolto il'],
+        'resolved_by' => ['label' => 'Risolto da'],
+        'resolution_notes' => ['label' => 'Note Risoluzione'],
+        'status' => ['label' => 'Stato'],
+        'validation_error' => ['label' => 'Errore di Validazione'],
     ],
     'actions' => [
         'resolve' => [
@@ -47,9 +35,7 @@ return [
                 'heading' => 'Risolvi Errore',
                 'description' => 'Inserisci i dati corretti per risolvere l\'errore',
             ],
-            'messages' => [
-                'success' => 'Errore risolto con successo',
-            ],
+            'messages' => ['success' => 'Errore risolto con successo'],
         ],
         'retry' => [
             'label' => 'Riprova',
@@ -57,9 +43,7 @@ return [
                 'heading' => 'Riprova Importazione',
                 'description' => 'Vuoi riprovare l\'importazione di questa riga?',
             ],
-            'messages' => [
-                'success' => 'Riga importata con successo',
-            ],
+            'messages' => ['success' => 'Riga importata con successo'],
         ],
         'skip' => [
             'label' => 'Salta',
@@ -67,9 +51,7 @@ return [
                 'heading' => 'Salta Riga',
                 'description' => 'Sei sicuro di voler saltare questa riga?',
             ],
-            'messages' => [
-                'success' => 'Riga saltata con successo',
-            ],
+            'messages' => ['success' => 'Riga saltata con successo'],
         ],
         'bulk_resolve' => [
             'label' => 'Risolvi Selezionati',
@@ -77,14 +59,10 @@ return [
                 'heading' => 'Risolvi Errori Selezionati',
                 'description' => 'Vuoi risolvere tutti gli errori selezionati?',
             ],
-            'messages' => [
-                'success' => 'Errori risolti con successo',
-            ],
+            'messages' => ['success' => 'Errori risolti con successo'],
         ],
         'import' => [
-            'fields' => [
-                'import_file' => 'Seleziona un file XLS o CSV da caricare',
-            ],
+            'fields' => ['import_file' => 'Seleziona un file XLS o CSV da caricare'],
         ],
         'export' => [
             'filename_prefix' => 'Aree al',
@@ -116,11 +94,9 @@ return [
         'system' => 'Errore di Sistema',
     ],
     'model' => [
-        'label' => 'failed import row.model',
+        'label' => 'Riga Import Fallita',
     ],
     'plural' => [
-        'model' => [
-            'label' => 'failed import row.plural.model',
-        ],
+        'model' => ['label' => 'Righe Import Fallite'],
     ],
 ];
