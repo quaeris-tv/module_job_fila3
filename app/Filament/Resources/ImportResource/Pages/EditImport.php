@@ -8,7 +8,7 @@ use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Modules\Job\Filament\Resources\ImportResource;
 
-class EditImport extends EditRecord
+class EditImport extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     protected static string $resource = ImportResource::class;
 

@@ -1,4 +1,5 @@
 <?php return array (
+<<<<<<< HEAD
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
   'navigation' => 
@@ -88,5 +89,19 @@
     'batch_cancelled' => 'Batch cancellato',
     'batch_finished' => 'Batch completato',
     'batch_processing' => 'Batch in elaborazione',
+=======
+  'navigation' => 
+  array (
+    'name' => 'Batch Jobs',
+    'plural' => 'Batch Jobs',
+    'group' => 
+    array (
+      'name' => 'Sistema',
+      'description' => 'Gestione dei job batch e delle code di elaborazione',
+    ),
+    'label' => 'Job Batch',
+    'sort' => 10,
+    'icon' => 'job-batch-animated',
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   ),
 );

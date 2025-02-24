@@ -1,4 +1,5 @@
 <?php return array (
+<<<<<<< HEAD
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
   'navigation' => 
@@ -141,5 +142,19 @@
     'normal' => 'Normale',
     'high' => 'Alta',
     'urgent' => 'Urgente',
+=======
+  'navigation' => 
+  array (
+    'name' => 'Gestione Jobs',
+    'plural' => 'Gestione Jobs',
+    'group' => 
+    array (
+      'name' => 'Sistema',
+      'description' => 'Gestione centralizzata di tutti i jobs',
+    ),
+    'label' => 'Job Manager',
+    'sort' => 1,
+    'icon' => 'job-manager-animated',
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   ),
 );

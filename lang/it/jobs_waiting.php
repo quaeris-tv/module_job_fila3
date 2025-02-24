@@ -1,12 +1,16 @@
 <?php return array (
+<<<<<<< HEAD
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
+=======
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   'navigation' => 
   array (
     'name' => 'Jobs in Attesa',
     'plural' => 'Jobs in Attesa',
     'group' => 
     array (
+<<<<<<< HEAD
       'name' => 'Jobs',
       'description' => 'Gestione dei jobs in attesa di esecuzione',
     ),
@@ -124,5 +128,13 @@
     'scheduled' => 'Schedulato',
     'recurring' => 'Ricorrente',
     'batch' => 'Batch',
+=======
+      'name' => 'Sistema',
+      'description' => 'Monitoraggio dei jobs in coda',
+    ),
+    'label' => 'Jobs in Attesa',
+    'sort' => 15,
+    'icon' => 'job-waiting-animated',
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   ),
 );

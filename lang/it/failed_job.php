@@ -1,4 +1,5 @@
 <?php return array (
+<<<<<<< HEAD
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
   'navigation' => 
@@ -163,5 +164,19 @@
     array (
       'label' => 'failed job.plural.model',
     ),
+=======
+  'navigation' => 
+  array (
+    'name' => 'Jobs Falliti',
+    'plural' => 'Jobs Falliti',
+    'group' => 
+    array (
+      'name' => 'Sistema',
+      'description' => 'Gestione e recupero dei jobs falliti',
+    ),
+    'label' => 'Jobs Falliti',
+    'sort' => 93,
+    'icon' => 'job-failed-job',
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   ),
 );

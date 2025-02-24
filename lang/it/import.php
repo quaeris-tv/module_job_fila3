@@ -1,4 +1,5 @@
 <?php return array (
+<<<<<<< HEAD
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
   'navigation' => 
@@ -130,17 +131,69 @@
     'partial' => 'Completato Parzialmente',
   ),
   'types' => 
+=======
+  'navigation' => 
+  array (
+    'name' => 'Importazione',
+    'plural' => 'Importazioni',
+    'group' => 
+    array (
+      'name' => 'Sistema',
+      'description' => 'Gestione delle importazioni di dati',
+    ),
+    'label' => 'Importazione Dati',
+    'sort' => 10,
+    'icon' => 'job-import',
+  ),
+  'fields' => 
+  array (
+    'file' => 'File',
+    'source' => 'Sorgente',
+    'format' => 'Formato',
+    'rows' => 'Righe',
+    'processed' => 'Processate',
+    'failed' => 'Fallite',
+    'started_at' => 'Iniziato il',
+    'completed_at' => 'Completato il',
+    'options' => 'Opzioni',
+  ),
+  'formats' => 
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   array (
     'csv' => 'CSV',
     'excel' => 'Excel',
     'json' => 'JSON',
     'xml' => 'XML',
   ),
+<<<<<<< HEAD
   'formats' => 
   array (
     'standard' => 'Standard',
     'extended' => 'Esteso',
     'minimal' => 'Minimo',
     'custom' => 'Personalizzato',
+=======
+  'options' => 
+  array (
+    'headers' => 'Prima riga contiene intestazioni',
+    'delimiter' => 'Delimitatore',
+    'encoding' => 'Codifica',
+    'sheet' => 'Foglio di lavoro',
+    'chunk_size' => 'Dimensione chunk',
+  ),
+  'actions' => 
+  array (
+    'upload' => 'Carica File',
+    'start' => 'Avvia Importazione',
+    'download_template' => 'Scarica Template',
+    'download_failed' => 'Scarica Righe Fallite',
+  ),
+  'messages' => 
+  array (
+    'upload_success' => 'File caricato con successo',
+    'import_started' => 'Importazione avviata',
+    'import_completed' => 'Importazione completata',
+    'import_failed' => 'Errore durante l\'importazione',
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   ),
 );

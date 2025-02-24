@@ -1,4 +1,5 @@
 <?php return array (
+<<<<<<< HEAD
   'resources' => 'Risorse',
   'pages' => 'Pagine',
   'widgets' => 'Widgets',
@@ -46,5 +47,19 @@
         'parent_name' => 'Nome area livello superiore',
       ),
     ),
+=======
+  'navigation' => 
+  array (
+    'name' => 'Stato Jobs',
+    'plural' => 'Stati Jobs',
+    'group' => 
+    array (
+      'name' => 'Sistema',
+      'description' => 'Monitoraggio dello stato dei jobs',
+    ),
+    'label' => 'Stato Jobs',
+    'sort' => 73,
+    'icon' => 'job-status-animated',
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   ),
 );

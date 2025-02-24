@@ -1,4 +1,5 @@
 <?php return array (
+<<<<<<< HEAD
   'pages' => 'Pagine',
   'widgets' => 'schedule',
   'navigation' => 
@@ -211,5 +212,19 @@
   'model' => 
   array (
     'label' => 'schedule.model',
+=======
+  'navigation' => 
+  array (
+    'name' => 'Scheduler',
+    'plural' => 'Scheduler',
+    'group' => 
+    array (
+      'name' => 'Sistema',
+      'description' => 'Gestione dei jobs programmati',
+    ),
+    'label' => 'Job Scheduler',
+    'sort' => 82,
+    'icon' => 'job-schedule-animated',
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   ),
 );

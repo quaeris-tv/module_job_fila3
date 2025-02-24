@@ -11,8 +11,13 @@
       'description' => 'Gestione delle righe di importazione fallite',
     ),
     'label' => 'righe import fallite',
+<<<<<<< HEAD
     'sort' => 80,
     'icon' => 'failed import row.navigation',
+=======
+    'sort' => 97,
+    'icon' => 'job-failed-import-animated',
+>>>>>>> cca53d624fe322cea7456476c18cf85580f41a5d
   ),
   'fields' => 
   array (
