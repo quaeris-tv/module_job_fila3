@@ -18,4 +18,4 @@ class EditJobsWaiting extends XotBaseEditRecord
             DeleteAction::make(),
         ];
     }
-} 
+}

@@ -135,4 +135,3 @@ return [
         'custom' => 'Personalizzato',
     ],
 ];
-

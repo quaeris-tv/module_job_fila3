@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\ScheduleResource\Pages;
 
-use Filament\Actions;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Illuminate\Support\Collection;
@@ -33,8 +32,6 @@ class EditSchedule extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditReco
         return $form
             ->schema($this->getFormSchema());
     }
-
-   
 
     protected function onValidationError(ValidationException $exception): void
     {

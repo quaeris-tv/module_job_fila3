@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Modules\Job\Filament\Resources;
 
 use Filament\Forms;
-use Modules\Job\Filament\Resources\JobsWaitingResource\Pages\ListJobsWaiting;
 use Modules\Job\Filament\Resources\JobsWaitingResource\Widgets\JobsWaitingOverview;
 use Modules\Job\Models\Job;
 use Modules\Xot\Filament\Resources\XotBaseResource;
@@ -41,14 +40,10 @@ class JobsWaitingResource extends XotBaseResource
         ];
     }
 
-   
-
     public static function getWidgets(): array
     {
         return [
             JobsWaitingOverview::class,
         ];
     }
-
-   
 }
