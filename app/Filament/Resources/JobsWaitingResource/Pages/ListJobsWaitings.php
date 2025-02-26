@@ -7,7 +7,6 @@ declare(strict_types=1);
  */
 
 namespace Modules\Job\Filament\Resources\JobsWaitingResource\Pages;
-          
 
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;

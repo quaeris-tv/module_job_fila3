@@ -8,4 +8,4 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 class CreateJobsWaiting extends XotBaseCreateRecord
 {
     protected static string $resource = JobsWaitingResource::class;
-} 
+}

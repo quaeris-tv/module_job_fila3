@@ -1,4 +1,5 @@
 <?php
+
 return [
     'navigation' => [
         'name' => 'Jobs in Attesa',
