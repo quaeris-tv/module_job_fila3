@@ -107,7 +107,7 @@ class WorkerCheck extends Command
      * Start the queue listener.
      *
      * @return string
-     * Method Modules\Job\Console\Commands\WorkerCheck::restartQueue() is unused
+     * @method Modules\Job\Console\Commands\WorkerCheck::restartQueue() is unused
 
     private function restartQueue() {
         // $command = 'php-cli ' . base_path() . '/artisan queue:listen --timeout=60 --sleep=5 --tries=3 > /dev/null & echo $!'; // 5.1
