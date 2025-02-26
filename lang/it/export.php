@@ -125,26 +125,13 @@ return [
         'csv' => 'CSV',
         'excel' => 'Excel',
         'json' => 'JSON',
-        'xml' => 'XML',
         'pdf' => 'PDF',
+        'xml' => 'XML',
     ],
-    'options' => [
-        'include_headers' => 'Includi intestazioni',
-        'delimiter' => 'Delimitatore',
-        'encoding' => 'Codifica',
-        'worksheet_name' => 'Nome foglio di lavoro',
-        'chunk_size' => 'Dimensione chunk',
-    ],
-    'actions' => [
-        'create' => 'Nuova Esportazione',
-        'download' => 'Scarica',
-        'cancel' => 'Annulla',
-        'delete' => 'Elimina',
-    ],
-    'messages' => [
-        'export_queued' => 'Esportazione in coda',
-        'export_processing' => 'Esportazione in corso',
-        'export_completed' => 'Esportazione completata',
-        'export_failed' => 'Esportazione fallita',
+    'formats' => [
+        'standard' => 'Standard',
+        'extended' => 'Esteso',
+        'minimal' => 'Minimo',
+        'custom' => 'Personalizzato',
     ],
 ];
