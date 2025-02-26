@@ -4,44 +4,55 @@ declare(strict_types=1);
 
 namespace Modules\Job\Actions\Command;
 
-use App\Console\Kernel;
+use Illuminate\Console\Application;
 use Modules\Job\Datas\CommandData;
 use Spatie\LaravelData\DataCollection;
-use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 class GetCommandsAction
 {
-    use QueueableAction;
+    public function __construct(
+        private readonly Application $application
+    ) {}
 
     /**
+     * Execute the action.
+     *
      * @return DataCollection<CommandData>
      */
     public function execute(): DataCollection
     {
-        $commands = collect(app(Kernel::class)->all())->sortKeys();
-        $commandsKeys = $commands->keys()->toArray();
-        // foreach (config('filament-database-schedule.commands.exclude') as $exclude) {
-        //    $commandsKeys = preg_grep("/^$exclude/", $commandsKeys, PREG_GREP_INVERT);
-        // }
-        if ($commandsKeys == null) {
-            return CommandData::collection([]);
-        }
-        Assert::isArray($commandsKeys, '['.__LINE__.']['.__FILE__.']');
+        $commands = collect($this->application->all())->map(function ($command) {
+            $name = $command->getName();
+            $description = $command->getDescription();
+            $arguments = collect($command->getDefinition()->getArguments())
+                ->map(function ($argument) {
+                    return [
+                        'name' => $argument->getName(),
+                        'description' => $argument->getDescription(),
+                        'required' => $argument->isRequired(),
+                    ];
+                })->values();
 
-        $commands = $commands
-            ->only($commandsKeys)
-            ->map(function ($command) {
-                return [
-                    'name' => $command->getName(),
-                    'description' => $command->getDescription(),
-                    'signature' => $command->getSynopsis(),
-                    'full_name' => $command->getName().' - '.$command->getDescription(),
-                    'arguments' => app(GetCommandArgumentsActions::class)->execute($command),
-                    'options' => app(GetCommandOptionsActions::class)->execute($command),
-                ];
-            });
+            $options = collect($command->getDefinition()->getOptions())
+                ->map(function ($option) {
+                    return [
+                        'name' => $option->getName(),
+                        'description' => $option->getDescription(),
+                        'required' => $option->isValueRequired(),
+                    ];
+                })->values();
 
-        return CommandData::collection($commands);
+            return CommandData::from([
+                'name' => $name,
+                'full_name' => $name.' - '.$description,
+                'description' => $description,
+                'arguments' => $arguments->toArray(),
+                'options' => [
+                    'withValue' => $options->toArray(),
+                ],
+            ]);
+        });
+
+        return new DataCollection(CommandData::class, $commands->values()->all());
     }
 }

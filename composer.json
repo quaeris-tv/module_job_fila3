@@ -16,44 +16,16 @@
     ],
     "homepage": "https://github.com/laraxot/module_job_fila3.git",
     "license": "MIT",
-    "authors": [{
-        "name": "Marco Sottana",
-        "email": "marco.sottana@gmail.com",
-        "role": "Developer"
-    }],
-    "require": {
-        "php": "^8.2",
-        "filament/filament": "^3.2",
-        "invaders-xx/filament-jsoneditor": "*",
-        "mhmiton/laravel-modules-livewire": "*",
-        "thecodingmachine/safe": "*"
-    },
-    "require_comment":{
-        "laraxot/module_user_fila3": "*",
-        "laraxot/module_xot_fila3": "*"
-    },
-    "require-dev_comment": {
-        "driftingly/rector-laravel": "*",
-        "enlightn/enlightn": "*",
-        "larastan/larastan": "*",
-        "laravel/pint": "*",
-        "nunomaduro/collision": "*",
-        "nunomaduro/phpinsights": "*",
-        "orchestra/pest-plugin-testbench": "*",
-        "orchestra/testbench": "*",
-        "pestphp/pest": "*",
-        "pestphp/pest-plugin-arch": "*",
-        "pestphp/pest-plugin-laravel": "*",
-        "phpstan/phpstan-deprecation-rules": "*",
-        "phpstan/phpstan-phpunit": "*",
-        "rector/rector": "*",
-        "spatie/laravel-ray": "*",
-        "symplify/phpstan-rules": "*",
-        "thecodingmachine/phpstan-safe-rule": "*",
-        "tightenco/duster": "^2.2",
-        "vimeo/psalm": "*"
-    },
-    "repositories": [
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {},
+    "require-dev": {},
+    "repositories_comment": [
         {
             "type": "path",
             "url": "../User"
@@ -69,11 +41,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "Modules\\Job\\": ""
+            "Modules\\Job\\": "app/",
+            "Modules\\Job\\Database\\Factories\\": "database/factories/",
+            "Modules\\Job\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "post-autoload-dump1": "@php ./vendor/bin/testbench package:discover --ansi",
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
@@ -94,9 +68,7 @@
                 "Modules\\Job\\Providers\\JobServiceProvider",
                 "Modules\\Job\\Providers\\Filament\\AdminPanelProvider"
             ],
-            "aliases": {
-
-            }
+            "aliases": {}
         }
     },
     "minimum-stability": "dev",
