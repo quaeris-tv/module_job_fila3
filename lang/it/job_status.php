@@ -105,6 +105,9 @@ return [
             'icon' => 'download',
             'color' => 'info',
         ],
+        'label' => 'Stato Jobs',
+        'sort' => 73,
+        'icon' => 'job-status-animated',
     ],
     'messages' => [
         'no_jobs' => 'Nessun job monitorato al momento',

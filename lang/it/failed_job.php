@@ -1,8 +1,6 @@
 <?php
 
 return [
-    'pages' => 'Pagine',
-    'widgets' => 'Widgets',
     'navigation' => [
         'name' => 'Jobs Falliti',
         'plural' => 'Jobs Falliti',
@@ -132,5 +130,8 @@ return [
         'model' => [
             'label' => 'failed job.plural.model',
         ],
+        'label' => 'Jobs Falliti',
+        'sort' => 93,
+        'icon' => 'job-failed-job',
     ],
 ];

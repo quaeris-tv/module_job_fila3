@@ -1,8 +1,6 @@
 <?php
 
 return [
-    'pages' => 'Pagine',
-    'widgets' => 'Widgets',
     'navigation' => [
         'name' => 'Importazione',
         'plural' => 'Importazioni',
