@@ -13,7 +13,7 @@ use Modules\Job\Filament\Resources\ScheduleResource;
 use Modules\Xot\Filament\Traits\NavigationPageLabelTrait;
 use Webmozart\Assert\Assert;
 
-class CreateSchedule extends CreateRecord
+class CreateSchedule extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
 {
     use NavigationPageLabelTrait;
 

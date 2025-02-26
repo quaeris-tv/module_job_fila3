@@ -20,16 +20,16 @@ class GetCommandsAction
     public function execute(): DataCollection
     {
         $artisan = app(Application::class);
-        
+
         /** @var array<string, Command> $commands */
         $commands = $artisan->all();
-        
+
         /** @var Collection<int, CommandData> $commandDataCollection */
         $commandDataCollection = collect($commands)->map(function (Command $command): CommandData {
             $name = $command->getName() ?? '';
             $description = $command->getDescription();
             $signature = method_exists($command, 'getSignature') ? $command->getSignature() : $name;
-            
+
             /** @var Collection<int, array{name: string, description: string, required: bool}> $arguments */
             $arguments = collect($command->getDefinition()->getArguments())
                 ->map(function ($argument) {
@@ -54,7 +54,7 @@ class GetCommandsAction
                 name: $name,
                 description: $description,
                 signature: $signature,
-                full_name: $name . ' - ' . $description,
+                full_name: $name.' - '.$description,
                 arguments: $arguments->toArray(),
                 options: [
                     'withValue' => $options->toArray(),
