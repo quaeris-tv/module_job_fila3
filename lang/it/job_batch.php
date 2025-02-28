@@ -2,11 +2,11 @@
 
 return [
     'navigation' => [
-        'name' => 'Batch Jobs',
-        'plural' => 'Batch Jobs',
+        'name' => 'Job Batch',
+        'plural' => 'Job Batches',
         'group' => [
-            'name' => 'Sistema',
-            'description' => 'Gestione dei job batch e delle code di elaborazione',
+            'name' => 'Jobs',
+            'description' => 'Gestione dei processi in background',
         ],
         'label' => 'Job Batch',
         'sort' => 10,

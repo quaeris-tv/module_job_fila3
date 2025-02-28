@@ -2,11 +2,11 @@
 
 return [
     'navigation' => [
-        'name' => 'Scheduler',
-        'plural' => 'Scheduler',
+        'name' => 'Schedulatore',
+        'plural' => 'Schedulatori',
         'group' => [
-            'name' => 'Sistema',
-            'description' => 'Gestione dei jobs programmati',
+            'name' => 'Jobs',
+            'description' => 'Gestione dei job schedulati',
         ],
         'label' => 'Schedulatore',
         'sort' => 55,

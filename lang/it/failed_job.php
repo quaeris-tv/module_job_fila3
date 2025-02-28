@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'pages' => 'Pagine',
+    'widgets' => 'Widgets',
     'navigation' => [
         'name' => 'Jobs Falliti',
         'plural' => 'Jobs Falliti',
