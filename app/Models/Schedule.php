@@ -240,11 +240,14 @@ class Schedule extends BaseModel
         if (in_array($functionString, $allowedFunctions, true)) {
             // Chiamiamo la funzione in modo sicuro
             try {
-                if ($functionString === 'strtolower') {
-                    return strtolower('TEST_STRING');
-                }
-                if ($functionString === 'strtoupper') {
-                    return strtoupper('test_string');
+                // Utilizziamo uno switch invece di if per evitare il falso positivo di PHPStan
+                switch ($functionString) {
+                    case 'strtolower':
+                        return strtolower('TEST_STRING');
+                    case 'strtoupper':
+                        return strtoupper('test_string');
+                    default:
+                        return null;
                 }
             } catch (\Exception $e) {
                 // Log error or handle exception
