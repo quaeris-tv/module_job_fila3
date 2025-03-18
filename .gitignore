@@ -36,7 +36,5 @@ cache/
 .git-blame-ignore-revs
 .php-cs-fixer.cache
 *:Zone.Identifier
-<<<<<<< HEAD
-=======
 .php-cs-fixer.cache
->>>>>>> 130cc9e05 (first)
+.php-cs-fixer.cache
