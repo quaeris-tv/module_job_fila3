@@ -194,7 +194,7 @@ class Schedule extends BaseModel
                 // Replace eval with a safer function or an allowed list of callable functions
                 $arguments[$argument] = $this->evaluateFunction($value['value']);
             } else {
-                $arguments[(string) ($value['name'] ?? $argument)] = (string) $value['value'];
+                $arguments[(string) ($value['name'] ?? $argument)] = is_string($value) ? $value : (string) $value['value'];
             }
         }
 
@@ -217,7 +217,7 @@ class Schedule extends BaseModel
             if (is_array($value)) {
                 Assert::nullOrString($value['name']);
 
-                return '--'.((string) ($value['name'] ?? $key)).'='.((string) $value['value']);
+                return '--'.((string) ($value['name'] ?? $key)).'='.(string) $value['value'];
             }
 
             return "--{$value}";
